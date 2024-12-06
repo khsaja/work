@@ -1,0 +1,168 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ادارةقواعدبياناتمربوطةمعاكسس
+</name>
+</assembly>
+<members>
+<member name="T:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet1.khadamiDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet1.khadamiRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet1.khadamiRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet1">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet1TableAdapters.khadamiTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet1TableAdapters.TableAdapterManager.UpdateAll(ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet1)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet1TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet.الخدمي_1DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet.الخدمي_1Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet.الخدمي_1RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSetTableAdapters.الخدمي_1TableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSetTableAdapters.TableAdapterManager.UpdateAll(ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.allianceDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.My.Resources.Resources.ادارة_مكتب">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.My.Resources.Resources.الثانية">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.My.Resources.Resources.الخلفية_الثابتة">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.My.Resources.Resources.الرايع">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.My.Resources.Resources.السهم">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.My.Resources.Resources.الواجهة_الاولى">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.My.Resources.Resources.زر_الماكنة_الانتخابية">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.My.Resources.Resources.سهم">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.My.Resources.Resources.صورة_شخصية">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.My.Resources.Resources.صورة_شخصية1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:ادارة_قواعد_بيانات_مربوطة_مع_اكسس.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
