@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98763BCE-72E8-4C6D-832A-D6D5FAF1E60E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>white_hand.My.MyApplication</StartupObject>
+    <RootNamespace>white_hand</RootNamespace>
+    <AssemblyName>white_hand</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>white_hand.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>white_hand.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="white_handDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>white_handDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="استعراص و طباعة ملف محاور الخدمي.Designer.vb">
+      <DependentUpon>استعراص و طباعة ملف محاور الخدمي.vb</DependentUpon>
+    </Compile>
+    <Compile Include="استعراص و طباعة ملف محاور الخدمي.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="استعراض و طباعة ملف الفريق القيادي.Designer.vb">
+      <DependentUpon>استعراض و طباعة ملف الفريق القيادي.vb</DependentUpon>
+    </Compile>
+    <Compile Include="استعراض و طباعة ملف الفريق القيادي.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="استعراض_الماكنة_الانتخابية.Designer.vb">
+      <DependentUpon>استعراض_الماكنة_الانتخابية.vb</DependentUpon>
+    </Compile>
+    <Compile Include="استعراض_الماكنة_الانتخابية.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="استعراض_تحديث_بطائق_الناخبين.Designer.vb">
+      <DependentUpon>استعراض_تحديث_بطائق_الناخبين.vb</DependentUpon>
+    </Compile>
+    <Compile Include="استعراض_تحديث_بطائق_الناخبين.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="استعراض_فيض_الزهراء.Designer.vb">
+      <DependentUpon>استعراض_فيض_الزهراء.vb</DependentUpon>
+    </Compile>
+    <Compile Include="استعراض_فيض_الزهراء.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="استعراض_ملف_الشباب.Designer.vb">
+      <DependentUpon>استعراض_ملف_الشباب.vb</DependentUpon>
+    </Compile>
+    <Compile Include="استعراض_ملف_الشباب.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="استعراض_ملف_الفضلاء.Designer.vb">
+      <DependentUpon>استعراض_ملف_الفضلاء.vb</DependentUpon>
+    </Compile>
+    <Compile Include="استعراض_ملف_الفضلاء.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="استعراض_ملف_المؤسسات.Designer.vb">
+      <DependentUpon>استعراض_ملف_المؤسسات.vb</DependentUpon>
+    </Compile>
+    <Compile Include="استعراض_ملف_المؤسسات.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="استعراض_و_طباعة المحاور.Designer.vb">
+      <DependentUpon>استعراض_و_طباعة المحاور.vb</DependentUpon>
+    </Compile>
+    <Compile Include="استعراض_و_طباعة المحاور.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="استعراض_و_طباعة_ملف_المراقبين_الخارجيين.Designer.vb">
+      <DependentUpon>استعراض_و_طباعة_ملف_المراقبين_الخارجيين.vb</DependentUpon>
+    </Compile>
+    <Compile Include="استعراض_و_طباعة_ملف_المراقبين_الخارجيين.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الدخول _بصفة_مسؤول.Designer.vb">
+      <DependentUpon>الدخول _بصفة_مسؤول.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الدخول _بصفة_مسؤول.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الفريق القيادي.Designer.vb">
+      <DependentUpon>الفريق القيادي.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الفريق القيادي.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الفضلاء.Designer.vb">
+      <DependentUpon>الفضلاء.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الفضلاء.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="المؤسسات.Designer.vb">
+      <DependentUpon>المؤسسات.vb</DependentUpon>
+    </Compile>
+    <Compile Include="المؤسسات.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="المحاور.Designer.vb">
+      <DependentUpon>المحاور.vb</DependentUpon>
+    </Compile>
+    <Compile Include="المحاور.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="المحور_الخدمي.Designer.vb">
+      <DependentUpon>المحور_الخدمي.vb</DependentUpon>
+    </Compile>
+    <Compile Include="المحور_الخدمي.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="المراقبين_الخارجيين.Designer.vb">
+      <DependentUpon>المراقبين_الخارجيين.vb</DependentUpon>
+    </Compile>
+    <Compile Include="المراقبين_الخارجيين.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="المراقبين_للتنفيذية.Designer.vb">
+      <DependentUpon>المراقبين_للتنفيذية.vb</DependentUpon>
+    </Compile>
+    <Compile Include="المراقبين_للتنفيذية.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الملف الخدمي.Designer.vb">
+      <DependentUpon>الملف الخدمي.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الملف الخدمي.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الملف_العقائدي.Designer.vb">
+      <DependentUpon>الملف_العقائدي.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الملف_العقائدي.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الملفات.Designer.vb">
+      <DependentUpon>الملفات.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الملفات.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الواجهات_التنفيذية.Designer.vb">
+      <DependentUpon>الواجهات_التنفيذية.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الواجهات_التنفيذية.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الواجهات_الفنية.Designer.vb">
+      <DependentUpon>الواجهات_الفنية.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الواجهات_الفنية.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الواجهات_التنظيمية.Designer.vb">
+      <DependentUpon>الواجهات_التنظيمية.vb</DependentUpon>
+    </Compile>
+    <Compile Include="الواجهات_التنظيمية.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الواجهة.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="الواجهة.Designer.vb">
+      <DependentUpon>الواجهة.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="باسورد ملف محاور الخدمي.Designer.vb">
+      <DependentUpon>باسورد ملف محاور الخدمي.vb</DependentUpon>
+    </Compile>
+    <Compile Include="باسورد ملف محاور الخدمي.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="باسورد_المحاور.Designer.vb">
+      <DependentUpon>باسورد_المحاور.vb</DependentUpon>
+    </Compile>
+    <Compile Include="باسورد_المحاور.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="باسورد_المراقبين_الخارجيين.Designer.vb">
+      <DependentUpon>باسورد_المراقبين_الخارجيين.vb</DependentUpon>
+    </Compile>
+    <Compile Include="باسورد_المراقبين_الخارجيين.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="باسورد_ملف_المراقبين.Designer.vb">
+      <DependentUpon>باسورد_ملف_المراقبين.vb</DependentUpon>
+    </Compile>
+    <Compile Include="باسورد_ملف_المراقبين.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="باسوورد _الدخول_للفضلاء.Designer.vb">
+      <DependentUpon>باسوورد _الدخول_للفضلاء.vb</DependentUpon>
+    </Compile>
+    <Compile Include="باسوورد _الدخول_للفضلاء.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="باسوورد الفريق القيادي.Designer.vb">
+      <DependentUpon>باسوورد الفريق القيادي.vb</DependentUpon>
+    </Compile>
+    <Compile Include="باسوورد الفريق القيادي.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="باسوورد_الدخول_لملف_الشباب.Designer.vb">
+      <DependentUpon>باسوورد_الدخول_لملف_الشباب.vb</DependentUpon>
+    </Compile>
+    <Compile Include="باسوورد_الدخول_لملف_الشباب.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="باسوورد_المؤسسات.Designer.vb">
+      <DependentUpon>باسوورد_المؤسسات.vb</DependentUpon>
+    </Compile>
+    <Compile Include="باسوورد_المؤسسات.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="باسوورد_الماكنة_الانتخابية.Designer.vb">
+      <DependentUpon>باسوورد_الماكنة_الانتخابية.vb</DependentUpon>
+    </Compile>
+    <Compile Include="باسوورد_الماكنة_الانتخابية.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="باسوورد_تحديث_بطائق_الناخبين.Designer.vb">
+      <DependentUpon>باسوورد_تحديث_بطائق_الناخبين.vb</DependentUpon>
+    </Compile>
+    <Compile Include="باسوورد_تحديث_بطائق_الناخبين.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="باسوورد_فيض_الزهراء.Designer.vb">
+      <DependentUpon>باسوورد_فيض_الزهراء.vb</DependentUpon>
+    </Compile>
+    <Compile Include="باسوورد_فيض_الزهراء.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأكيد_حذف_بيانات_الفضلاء.Designer.vb">
+      <DependentUpon>تأكيد_حذف_بيانات_الفضلاء.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأكيد_حذف_بيانات_الفضلاء.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تأكيد_حذف_بيانات_فيض_الزهراء.Designer.vb">
+      <DependentUpon>تأكيد_حذف_بيانات_فيض_الزهراء.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تأكيد_حذف_بيانات_فيض_الزهراء.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تحديث_بطائق_الناخبين.Designer.vb">
+      <DependentUpon>تحديث_بطائق_الناخبين.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تحديث_بطائق_الناخبين.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تعيين الدخول.Designer.vb">
+      <DependentUpon>تعيين الدخول.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تعيين الدخول.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تقرير محاور الخدمي.Designer.vb">
+      <DependentUpon>تقرير محاور الخدمي.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تقرير محاور الخدمي.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تقرير_الفريق_القيادي.Designer.vb">
+      <DependentUpon>تقرير_الفريق_القيادي.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تقرير_الفريق_القيادي.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تقرير_المؤسسات.Designer.vb">
+      <DependentUpon>تقرير_المؤسسات.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تقرير_المؤسسات.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تقرير_الماكنة_الانتخابية.Designer.vb">
+      <DependentUpon>تقرير_الماكنة_الانتخابية.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تقرير_الماكنة_الانتخابية.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تقرير_المحاور.Designer.vb">
+      <DependentUpon>تقرير_المحاور.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تقرير_المحاور.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تقرير_تحديث_بطائق_الناخبين.Designer.vb">
+      <DependentUpon>تقرير_تحديث_بطائق_الناخبين.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تقرير_تحديث_بطائق_الناخبين.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تقرير_فيض_الزهراء.Designer.vb">
+      <DependentUpon>تقرير_فيض_الزهراء.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تقرير_فيض_الزهراء.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تقرير_مراقبين_التنفيذي.Designer.vb">
+      <DependentUpon>تقرير_مراقبين_التنفيذي.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تقرير_مراقبين_التنفيذي.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تقرير_ملف_الشبـاب.Designer.vb">
+      <DependentUpon>تقرير_ملف_الشبـاب.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تقرير_ملف_الشبـاب.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تقرير_ملف_الفضلاء.Designer.vb">
+      <DependentUpon>تقرير_ملف_الفضلاء.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تقرير_ملف_الفضلاء.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="تقرير_ملف_المراقبين_الخارجين.Designer.vb">
+      <DependentUpon>تقرير_ملف_المراقبين_الخارجين.vb</DependentUpon>
+    </Compile>
+    <Compile Include="تقرير_ملف_المراقبين_الخارجين.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="عرض_صور_الفضلاء.Designer.vb">
+      <DependentUpon>عرض_صور_الفضلاء.vb</DependentUpon>
+    </Compile>
+    <Compile Include="عرض_صور_الفضلاء.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="فيض_الزهراء.Designer.vb">
+      <DependentUpon>فيض_الزهراء.vb</DependentUpon>
+    </Compile>
+    <Compile Include="فيض_الزهراء.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="مسودة.Designer.vb">
+      <DependentUpon>مسودة.vb</DependentUpon>
+    </Compile>
+    <Compile Include="مسودة.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ملف-الماكنة_الانتخابية.Designer.vb">
+      <DependentUpon>ملف-الماكنة_الانتخابية.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ملف-الماكنة_الانتخابية.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ملف_الشباب.Designer.vb">
+      <DependentUpon>ملف_الشباب.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ملف_الشباب.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="واجهة استعادة كلمة المرور.Designer.vb">
+      <DependentUpon>واجهة استعادة كلمة المرور.vb</DependentUpon>
+    </Compile>
+    <Compile Include="واجهة استعادة كلمة المرور.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="واجهة_عرض_الصور.Designer.vb">
+      <DependentUpon>واجهة_عرض_الصور.vb</DependentUpon>
+    </Compile>
+    <Compile Include="واجهة_عرض_الصور.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="واجهة_عرض_المشاركين.Designer.vb">
+      <DependentUpon>واجهة_عرض_المشاركين.vb</DependentUpon>
+    </Compile>
+    <Compile Include="واجهة_عرض_المشاركين.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="واجهة_عرض_طلبات_استرداد_كلمة-المرور.Designer.vb">
+      <DependentUpon>واجهة_عرض_طلبات_استرداد_كلمة-المرور.vb</DependentUpon>
+    </Compile>
+    <Compile Include="واجهة_عرض_طلبات_استرداد_كلمة-المرور.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="استعراص و طباعة ملف محاور الخدمي.resx">
+      <DependentUpon>استعراص و طباعة ملف محاور الخدمي.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="استعراض و طباعة ملف الفريق القيادي.resx">
+      <DependentUpon>استعراض و طباعة ملف الفريق القيادي.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="استعراض_الماكنة_الانتخابية.resx">
+      <DependentUpon>استعراض_الماكنة_الانتخابية.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="استعراض_تحديث_بطائق_الناخبين.resx">
+      <DependentUpon>استعراض_تحديث_بطائق_الناخبين.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="استعراض_فيض_الزهراء.resx">
+      <DependentUpon>استعراض_فيض_الزهراء.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="استعراض_ملف_الشباب.resx">
+      <DependentUpon>استعراض_ملف_الشباب.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="استعراض_ملف_الفضلاء.resx">
+      <DependentUpon>استعراض_ملف_الفضلاء.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="استعراض_ملف_المؤسسات.resx">
+      <DependentUpon>استعراض_ملف_المؤسسات.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="استعراض_و_طباعة المحاور.resx">
+      <DependentUpon>استعراض_و_طباعة المحاور.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="استعراض_و_طباعة_ملف_المراقبين_الخارجيين.resx">
+      <DependentUpon>استعراض_و_طباعة_ملف_المراقبين_الخارجيين.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الدخول _بصفة_مسؤول.resx">
+      <DependentUpon>الدخول _بصفة_مسؤول.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الفريق القيادي.resx">
+      <DependentUpon>الفريق القيادي.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الفضلاء.resx">
+      <DependentUpon>الفضلاء.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المؤسسات.resx">
+      <DependentUpon>المؤسسات.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المحاور.resx">
+      <DependentUpon>المحاور.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المحور_الخدمي.resx">
+      <DependentUpon>المحور_الخدمي.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المراقبين_الخارجيين.resx">
+      <DependentUpon>المراقبين_الخارجيين.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="المراقبين_للتنفيذية.resx">
+      <DependentUpon>المراقبين_للتنفيذية.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الملف الخدمي.resx">
+      <DependentUpon>الملف الخدمي.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الملف_العقائدي.resx">
+      <DependentUpon>الملف_العقائدي.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الملفات.resx">
+      <DependentUpon>الملفات.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الواجهات_التنفيذية.resx">
+      <DependentUpon>الواجهات_التنفيذية.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الواجهات_الفنية.resx">
+      <DependentUpon>الواجهات_الفنية.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الواجهات_التنظيمية.resx">
+      <DependentUpon>الواجهات_التنظيمية.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="الواجهة.resx">
+      <DependentUpon>الواجهة.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="باسورد ملف محاور الخدمي.resx">
+      <DependentUpon>باسورد ملف محاور الخدمي.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="باسورد_المحاور.resx">
+      <DependentUpon>باسورد_المحاور.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="باسورد_المراقبين_الخارجيين.resx">
+      <DependentUpon>باسورد_المراقبين_الخارجيين.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="باسورد_ملف_المراقبين.resx">
+      <DependentUpon>باسورد_ملف_المراقبين.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="باسوورد _الدخول_للفضلاء.resx">
+      <DependentUpon>باسوورد _الدخول_للفضلاء.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="باسوورد الفريق القيادي.resx">
+      <DependentUpon>باسوورد الفريق القيادي.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="باسوورد_الدخول_لملف_الشباب.resx">
+      <DependentUpon>باسوورد_الدخول_لملف_الشباب.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="باسوورد_المؤسسات.resx">
+      <DependentUpon>باسوورد_المؤسسات.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="باسوورد_الماكنة_الانتخابية.resx">
+      <DependentUpon>باسوورد_الماكنة_الانتخابية.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="باسوورد_تحديث_بطائق_الناخبين.resx">
+      <DependentUpon>باسوورد_تحديث_بطائق_الناخبين.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="باسوورد_فيض_الزهراء.resx">
+      <DependentUpon>باسوورد_فيض_الزهراء.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأكيد_حذف_بيانات_الفضلاء.resx">
+      <DependentUpon>تأكيد_حذف_بيانات_الفضلاء.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تأكيد_حذف_بيانات_فيض_الزهراء.resx">
+      <DependentUpon>تأكيد_حذف_بيانات_فيض_الزهراء.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تحديث_بطائق_الناخبين.resx">
+      <DependentUpon>تحديث_بطائق_الناخبين.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تعيين الدخول.resx">
+      <DependentUpon>تعيين الدخول.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تقرير محاور الخدمي.resx">
+      <DependentUpon>تقرير محاور الخدمي.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تقرير_الفريق_القيادي.resx">
+      <DependentUpon>تقرير_الفريق_القيادي.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تقرير_المؤسسات.resx">
+      <DependentUpon>تقرير_المؤسسات.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تقرير_الماكنة_الانتخابية.resx">
+      <DependentUpon>تقرير_الماكنة_الانتخابية.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تقرير_المحاور.resx">
+      <DependentUpon>تقرير_المحاور.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تقرير_تحديث_بطائق_الناخبين.resx">
+      <DependentUpon>تقرير_تحديث_بطائق_الناخبين.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تقرير_فيض_الزهراء.resx">
+      <DependentUpon>تقرير_فيض_الزهراء.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تقرير_مراقبين_التنفيذي.resx">
+      <DependentUpon>تقرير_مراقبين_التنفيذي.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تقرير_ملف_الشبـاب.resx">
+      <DependentUpon>تقرير_ملف_الشبـاب.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تقرير_ملف_الفضلاء.resx">
+      <DependentUpon>تقرير_ملف_الفضلاء.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="تقرير_ملف_المراقبين_الخارجين.resx">
+      <DependentUpon>تقرير_ملف_المراقبين_الخارجين.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="عرض_صور_الفضلاء.resx">
+      <DependentUpon>عرض_صور_الفضلاء.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="فيض_الزهراء.resx">
+      <DependentUpon>فيض_الزهراء.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="مسودة.resx">
+      <DependentUpon>مسودة.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ملف-الماكنة_الانتخابية.resx">
+      <DependentUpon>ملف-الماكنة_الانتخابية.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ملف_الشباب.resx">
+      <DependentUpon>ملف_الشباب.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="واجهة استعادة كلمة المرور.resx">
+      <DependentUpon>واجهة استعادة كلمة المرور.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="واجهة_عرض_الصور.resx">
+      <DependentUpon>واجهة_عرض_الصور.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="واجهة_عرض_المشاركين.resx">
+      <DependentUpon>واجهة_عرض_المشاركين.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="واجهة_عرض_طلبات_استرداد_كلمة-المرور.resx">
+      <DependentUpon>واجهة_عرض_طلبات_استرداد_كلمة-المرور.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="white_handDataSet.xsc">
+      <DependentUpon>white_handDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="white_handDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>white_handDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="white_handDataSet.xss">
+      <DependentUpon>white_handDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\الواجهة الاولى.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\الخلفية الثابتة.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\سهم الرجوع.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\مكبرة البحث.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\اشعار.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\مكبرة البحث1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\سلة محذوفات.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\السلة.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\اضافة.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\الحفظ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\الحفظ1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\البحث.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\الحذف.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تعديل.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
