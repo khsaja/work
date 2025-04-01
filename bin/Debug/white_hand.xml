@@ -6,7 +6,10 @@ white_hand
 </name>
 </assembly>
 <members>
-<member name="P:white_hand.My.Resources.Resources.ResourceManager">
+<member name="M:white_hand.تقرير_فيض_الزهراء.CheckBox23_CheckedChanged(System.Object,System.EventArgs)">
+ '''''''''''''''''''''''''''''''''
+
+</member><member name="P:white_hand.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>

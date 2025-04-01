@@ -891,7 +891,7 @@ Partial Class مسودة
         Me.CheckBox1.Location = New System.Drawing.Point(14, 16)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.CheckBox1.Size = New System.Drawing.Size(242, 37)
+        Me.CheckBox1.Size = New System.Drawing.Size(238, 37)
         Me.CheckBox1.TabIndex = 576
         Me.CheckBox1.Text = "    انتخــابــــات 2013"
         Me.CheckBox1.UseVisualStyleBackColor = False
@@ -906,7 +906,7 @@ Partial Class مسودة
         Me.CheckBox2.Location = New System.Drawing.Point(14, 59)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.CheckBox2.Size = New System.Drawing.Size(242, 37)
+        Me.CheckBox2.Size = New System.Drawing.Size(238, 37)
         Me.CheckBox2.TabIndex = 577
         Me.CheckBox2.Text = "    انتخــابــــات 2021"
         Me.CheckBox2.UseVisualStyleBackColor = False
@@ -921,7 +921,7 @@ Partial Class مسودة
         Me.CheckBox3.Location = New System.Drawing.Point(14, 102)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.CheckBox3.Size = New System.Drawing.Size(242, 37)
+        Me.CheckBox3.Size = New System.Drawing.Size(238, 37)
         Me.CheckBox3.TabIndex = 578
         Me.CheckBox3.Text = "    انتخــابــــات 2023"
         Me.CheckBox3.UseVisualStyleBackColor = False

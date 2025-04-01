@@ -64,6 +64,19 @@ Public Class الفضلاء
                 sqlcon.Close()
             End If
         End Try
+        'Try
+        '    ' استعلام SQL لجلب جميع البيانات من جدول الناخبين
+        '    Dim query As String = "SELECT * FROM voter_fodalaa"
+        '    Dim adapter As New SqlDataAdapter(query, sqlcon)
+        '    Dim table As New DataTable()
+        '    adapter.Fill(table)
+
+        '    ' تحديث البيانات في DataGridView1
+        '    DataGridView1.DataSource = table
+
+        'Catch ex As Exception
+        '    MessageBox.Show("حدث خطأ أثناء تحميل البيانات: " & ex.Message)
+        'End Try
     End Sub
 
     ' 🔹 دالة لتلوين الصفوف بالتناوب بين الأبيض والرمادي
@@ -109,7 +122,7 @@ Public Class الفضلاء
 
                 Using reader As SqlDataReader = cmd.ExecuteReader()
                     If reader.Read() Then
-                        ' 🔹 تعبئة البيانات في الـ TextBoxes مباشرة بدون استبدال القيم الفارغة بـ "لا يوجد"
+                        '🔹 تعبئة البيانات في الـ TextBoxes مباشرة بدون استبدال القيم الفارغة بـ "لا يوجد"
                         TextBox55.Text = If(IsDBNull(reader("Voter_governorate_name")), "", reader("Voter_governorate_name").ToString().Trim())
                         TextBox56.Text = If(IsDBNull(reader("New_judiciary")), "", reader("New_judiciary").ToString().Trim())
                         TextBox57.Text = If(IsDBNull(reader("New_side")), "", reader("New_side").ToString().Trim())
@@ -120,7 +133,8 @@ Public Class الفضلاء
                         TextBox64.Text = If(IsDBNull(reader("Polling_Center_Name")), "", reader("Polling_Center_Name").ToString().Trim())
                         TextBox65.Text = If(IsDBNull(reader("Polling_station_address")), "", reader("Polling_station_address").ToString().Trim())
                         TextBox66.Text = If(IsDBNull(reader("Number_stations")), "", reader("Number_stations").ToString().Trim())
-                        'جدول الكسب 
+
+                        ''جدول الكسب 
                         TextBox54.Text = If(IsDBNull(reader("ID_AXIS_FAEDZAHRAA")), "", reader("ID_AXIS_FAEDZAHRAA").ToString().Trim())
                         TextBox19.Text = If(IsDBNull(reader("voter_name")), "", reader("voter_name").ToString().Trim())
                         ComboBox8.Text = If(IsDBNull(reader("degree_kinship")), "", reader("degree_kinship").ToString().Trim())
@@ -184,7 +198,8 @@ Public Class الفضلاء
 
             Dim query As String = "INSERT INTO voter_fodalaa  ( voter_name,voter_phone,degree_kinship,  voter_address, votercardnumber, votercardstatus, Filter_files, Nominate_observer, Nominate_mentor, Polling_center_number,Voter_governorate_name,New_judiciary,New_side,Supply_number,Supply_center_name,Registration_Center_Code,Registration_Center_Name,Polling_Center_Name,Polling_station_address ,Number_stations ,ID_AXIS_FAEDZAHRAA) VALUES(@voter_name,@voter_phone, @degree_kinship,  @voter_address, @votercardnumber, @votercardstatus, @Filter_files, @Nominate_observer, @Nominate_mentor, @Polling_center_number,@Voter_governorate_name,@New_judiciary,@New_side,@Supply_number,@Supply_center_name,@Registration_Center_Code,@Registration_Center_Name,@Polling_Center_Name,@Polling_station_address,@Number_stations, @ID_AXIS_FAEDZAHRAA);"
 
-
+            '3) استعلام إدخال بيانات الناخب وربطها بـ ID واسم المحور
+            'Dim query As String = "INSERT INTO voter_fodalaa (voter_name, voter_phone, degree_kinship, voter_address, votercardnumber, votercardstatus, ID_AXIS_FAEDZAHRAA) VALUES (@voter_name, @voter_phone, @degree_kinship, @voter_address, @votercardnumber, @votercardstatus, @ID_AXIS_FAEDZAHRAA);"
             ' 6) إنشاء أمر الإدخال وربطه بالمعاملة
             Using cmd As New SqlCommand(query, sqlcon, transaction)
 
@@ -253,6 +268,8 @@ Public Class الفضلاء
                 sqlcon.Close()
             End If
         End Try
+
+
     End Sub
     Private Sub DeleteRecord()
         Try
@@ -267,6 +284,7 @@ Public Class الفضلاء
         Catch ex As Exception
             MessageBox.Show("حدث خطأ أثناء الحذف: " & ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+
     End Sub
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
 
@@ -275,7 +293,7 @@ Public Class الفضلاء
 
         If result = DialogResult.Yes Then
             ' فتح نافذة إدخال كلمة المرور
-            Dim passwordForm As New تأكيد_حذف_بيانات_فيض_الزهراء()
+            Dim passwordForm As New تأكيد_حذف_بيانات_الفضلاء()
             passwordForm.ShowDialog()
 
             ' إذا كانت كلمة المرور صحيحة، قم بتنفيذ الحذف
@@ -286,6 +304,7 @@ Public Class الفضلاء
                 MessageBox.Show("لم يتم الحذف! كلمة المرور غير صحيحة.", "إلغاء", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         End If
+        LoadData() ' تحديث البيانات بعد الحذف
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
@@ -344,22 +363,7 @@ Public Class الفضلاء
     End Sub
 
 
-    ''مسح كل ما تم ادخاله في الادوات لادخال غيره
-    'Private Sub ClearControls(ctrl As Control)
-    '    For Each c As Control In ctrl.Controls
-    '        If TypeOf c Is TextBox Then
-    '            DirectCast(c, TextBox).Clear()
-    '        ElseIf TypeOf c Is ComboBox Then
-    '            DirectCast(c, ComboBox).SelectedIndex = -1
-    '        ElseIf TypeOf c Is CheckBox Then
-    '            DirectCast(c, CheckBox).Checked = False
-    '        End If
-    '        ' البحث داخل الحاويات الداخلية
-    '        If c.HasChildren Then
-    '            ClearControls(c)
-    '        End If
-    '    Next
-    'End Sub
+    
     Private Sub ClearControls(ctrl As Control)
         ' قائمة تحتوي على أسماء الـ TextBox التي لا تريد مسحها
         Dim excludedTextBoxes As String() = {"TextBox44", "TextBox45", "TextBox46", "TextBox47", "TextBox48", "TextBox49", "TextBox50", "TextBox51", "TextBox52", "TextBox53", "TextBox59", "TextBox60", "TextBox9", "TextBox35", "TextBox36"}
@@ -424,14 +428,16 @@ Public Class الفضلاء
                 cmd.Parameters.AddWithValue("@Gender", ComboBox2.Text)
 
                 cmd.Parameters.AddWithValue("@Socialname", If(String.IsNullOrWhiteSpace(TextBox6.Text), "لا يوجد", TextBox6.Text))
-                cmd.Parameters.AddWithValue("@birthDate", If(String.IsNullOrWhiteSpace(TextBox7.Text), "لا يوجد", TextBox7.Text))
+                'cmd.Parameters.AddWithValue("@birthDate", If(String.IsNullOrWhiteSpace(TextBox7.Text), "لا يوجد", TextBox7.Text))
+                cmd.Parameters.AddWithValue("@birthDate", If(String.IsNullOrWhiteSpace(DateTimePicker1.Text), "لا يوجد", DateTimePicker1.Value.ToString("yyyy-MM-dd")))
                 cmd.Parameters.AddWithValue("@familymembers", If(String.IsNullOrWhiteSpace(TextBox8.Text), "لا يوجد", TextBox8.Text))
                 cmd.Parameters.AddWithValue("@address", If(String.IsNullOrWhiteSpace(TextBox10.Text), "لا يوجد", TextBox10.Text))
                 cmd.Parameters.AddWithValue("@martialstatus", If(String.IsNullOrWhiteSpace(ComboBox4.Text), "لا يوجد", ComboBox4.Text))
                 cmd.Parameters.AddWithValue("@academicachievement", If(String.IsNullOrWhiteSpace(ComboBox6.Text), "لا يوجد", ComboBox6.Text))
                 cmd.Parameters.AddWithValue("@phone1", If(String.IsNullOrWhiteSpace(TextBox11.Text), "لا يوجد", TextBox11.Text))
                 cmd.Parameters.AddWithValue("@phone2", If(String.IsNullOrWhiteSpace(TextBox12.Text), "لا يوجد", TextBox12.Text))
-                cmd.Parameters.AddWithValue("@joiningdate", If(String.IsNullOrWhiteSpace(TextBox13.Text), "لا يوجد", TextBox13.Text))
+                cmd.Parameters.AddWithValue("@joiningdate", If(String.IsNullOrWhiteSpace(DateTimePicker2.Text), "لا يوجد", DateTimePicker2.Value.ToString("yyyy-MM-dd")))
+
                 cmd.Parameters.AddWithValue("@pointrefernce", If(String.IsNullOrWhiteSpace(TextBox16.Text), "لا يوجد", TextBox16.Text))
                 cmd.Parameters.AddWithValue("@Type", If(String.IsNullOrWhiteSpace(ComboBox1.Text), "لا يوجد", ComboBox1.Text))
                 cmd.Parameters.AddWithValue("@adjective", If(String.IsNullOrWhiteSpace(TextBox17.Text), "لا يوجد", TextBox17.Text))
@@ -567,6 +573,7 @@ Public Class الفضلاء
             If reader.Read() Then
                 ' تعبئة التكست بوكسات بالبيانات التي تم جلبها من قاعدة البيانات
                 TextBox68.Text = reader("ID").ToString()
+                TextBox54.Text = reader("ID").ToString()
                 TextBox1.Text = reader("NAME").ToString()
                 TextBox2.Text = reader("FATHER").ToString()
                 TextBox3.Text = reader("GRANDFATHER").ToString()
@@ -574,14 +581,33 @@ Public Class الفضلاء
                 TextBox5.Text = reader("Title").ToString()
                 ComboBox2.Text = reader("Gender").ToString()
                 TextBox6.Text = reader("Socialname").ToString()
-                TextBox7.Text = reader("birthDate").ToString()
+                'DateTimePicker1.Text = reader("birthDate").ToString()
+
+                Dim birthDateValue As String = reader("birthDate").ToString()
+
+                If birthDateValue = "لا يوجد" OrElse String.IsNullOrWhiteSpace(birthDateValue) Then
+                    ' تعيين القيمة الافتراضية في حالة عدم وجود تاريخ
+                    DateTimePicker1.Value = DateTime.Today  ' أو أي تاريخ افتراضي يناسبك
+                Else
+                    DateTimePicker1.Value = Convert.ToDateTime(birthDateValue)
+                End If
+
                 TextBox8.Text = reader("familymembers").ToString()
                 TextBox10.Text = reader("address").ToString()
                 ComboBox4.Text = reader("martialstatus").ToString()
                 ComboBox6.Text = reader("academicachievement").ToString()
                 TextBox11.Text = reader("phone1").ToString()
                 TextBox12.Text = reader("phone2").ToString()
-                TextBox13.Text = reader("joiningdate").ToString()
+
+                Dim birthDateValue2 As String = reader("joiningdate").ToString()
+
+                If birthDateValue2 = "لا يوجد" OrElse String.IsNullOrWhiteSpace(birthDateValue2) Then
+                    ' تعيين القيمة الافتراضية في حالة عدم وجود تاريخ
+                    DateTimePicker2.Value = DateTime.Today  ' أو أي تاريخ افتراضي يناسبك
+                Else
+                    DateTimePicker2.Value = Convert.ToDateTime(birthDateValue2)
+                End If
+
                 TextBox16.Text = reader("pointrefernce").ToString()
                 ComboBox1.Text = reader("Type").ToString()
                 TextBox17.Text = reader("adjective").ToString()
@@ -639,37 +665,7 @@ Public Class الفضلاء
                 TextBox38.Text = reader("axlecardnumber").ToString()
                 TextBox40.Text = reader("markaz_alekteaa").ToString()
 
-
-                ''    ' جلب الاسم الكامل من TextBox
-                ''    Dim fullName As String = TextBox14.Text
-
-                ''    ' جلب AxisID بناءً على الاسم الكامل
-                ''    Dim axisID As Integer = GetAxisIDByFullName(fullName)
-
-                ''    ' إذا تم العثور على المحور
-                ''    If axisID <> -1 Then
-                ''        ' جلب بيانات الناخبين التابعين لهذا المحور
-                ''        Dim dt As DataTable = GetVotersByAxisID(axisID)
-                ''        ' عرض البيانات في DataGridView
-                ''        DataGridView1.DataSource = dt
-
-                ''        ' تغيير لون النص فقط للناخبين التابعين لهذا المحور
-                ''        For Each row As DataGridViewRow In DataGridView1.Rows
-                ''            If Not row.IsNewRow Then
-                ''                row.DefaultCellStyle.ForeColor = Color.HotPink ' تغيير لون النص إلى وردي
-                ''            End If
-                ''        Next
-
-                ''        ' إذا لم يتم العثور على بيانات
-                ''        If dt.Rows.Count = 0 Then
-                ''            MessageBox.Show("لم يتم العثور على الناخبين التابعين لهذا المحور.")
-                ''        End If
-                ''    Else
-                ''        MessageBox.Show("لم يتم العثور على المحور بهذا الاسم الرباعي واللقب.")
-                ''    End If
-                ''Else
-                ''    MessageBox.Show("الشخص غير موجود.")
-                ''End If
+                '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
                 ' جلب الاسم الكامل من TextBox
                 Dim fullName As String = TextBox14.Text
 
@@ -701,71 +697,87 @@ Public Class الفضلاء
                 MessageBox.Show("الشخص غير موجود.")
             End If
             reader.Close()
+            ''''''''''''''''''''''''''''''''''''''''''
+           
+          
 
-            ' الحصول على اسم المحور من TextBox14
-            Dim pivotName As String = TextBox14.Text.Trim()
+            ' الحصول على الاسم الكامل للمحور من TextBox14
+            Dim pivotFullName1 As String = TextBox14.Text.Trim()
 
-            ' التأكد من أن اسم المحور ليس فارغًا قبل البحث
-            If pivotName <> "" Then
+            If pivotFullName1 <> "" Then
                 Try
-                    ' استعلام SQL لجلب عدد السجلات الخاصة بالمحور المطلوب
-                    Dim query As String = "SELECT COUNT(*) FROM voter_fodalaa WHERE voter_name = @voter_name AND voter_name IS NOT NULL"
-
+                    ' استعلام SQL لحساب عدد الناخبين المرتبطين بالمحور بناءً على الاسم الكامل
+                    Dim query As String = "SELECT COUNT(*) FROM voter_fodalaa vf " & _
+                                          "INNER JOIN AXIS_fodalaa af ON af.ID = vf.ID_AXIS_FAEDZAHRAA " & _
+                                          "WHERE (af.NAME + ' ' + af.FATHER + ' ' + af.GRANDFATHER + ' ' + af.great_father + ' ' + af.Title) = @FullName"
                     Dim cmd1 As New SqlCommand(query, sqlcon)
-                    cmd1.Parameters.AddWithValue("@voter_name", pivotName)
+                    cmd1.Parameters.AddWithValue("@FullName", pivotFullName1)
 
                     ' تنفيذ الاستعلام وجلب العدد
                     Dim count1 As Integer = Convert.ToInt32(cmd1.ExecuteScalar())
 
-                    ' تحديث TextBox80 بالعدد
+                    ' تحديث TextBox25 بالعدد
                     TextBox25.Text = count1.ToString()
                 Catch ex As Exception
                     MessageBox.Show("حدث خطأ أثناء البحث: " & ex.Message)
                 End Try
             Else
-                ' إذا كان TextBox14 فارغًا، يتم مسح العدد في TextBox80
+                ' إذا كان TextBox14 فارغًا، يتم مسح TextBox25
                 TextBox25.Text = ""
             End If
             '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-            If pivotName <> "" Then
+            ' الحصول على الاسم الكامل للمحور من TextBox14
+            Dim pivotFullName As String = TextBox14.Text.Trim()
+
+            If pivotFullName <> "" Then
                 Try
-                    ' استعلام SQL لجلب عدد السجلات الخاصة بالمحور المطلوب مع شرط أن البطاقة محدثة فقط
-                    Dim query As String = "SELECT COUNT(*) FROM voter_fodalaa WHERE votercardstatus = @votercardstatus AND votercardstatus = 'محدثة'"
+                    ' استعلام SQL لحساب عدد الناخبين المرتبطين بالمحور بناءً على الاسم الكامل وحالة البطاقة "محدثة"
+                    Dim query As String = "SELECT COUNT(*) FROM voter_fodalaa vf " & _
+                                          "INNER JOIN AXIS_fodalaa af ON af.ID = vf.ID_AXIS_FAEDZAHRAA " & _
+                                          "WHERE (af.NAME + ' ' + af.FATHER + ' ' + af.GRANDFATHER + ' ' + af.great_father + ' ' + af.Title) = @FullName " & _
+                                          "AND vf.votercardstatus = 'محدثة'"
 
                     Dim cmd1 As New SqlCommand(query, sqlcon)
-                    cmd1.Parameters.AddWithValue("@votercardstatus", pivotName)
+                    cmd1.Parameters.AddWithValue("@FullName", pivotFullName)
 
                     ' تنفيذ الاستعلام وجلب العدد
                     Dim count1 As Integer = Convert.ToInt32(cmd1.ExecuteScalar())
 
-                    ' تحديث TextBox25 بالعدد
+                    ' تحديث TextBox23 بالعدد
                     TextBox23.Text = count1.ToString()
                 Catch ex As Exception
                     MessageBox.Show("حدث خطأ أثناء البحث: " & ex.Message)
                 End Try
             Else
-                ' إذا كان TextBox14 فارغًا، يتم مسح العدد في TextBox25
+                ' إذا كان TextBox14 فارغًا، يتم مسح TextBox23
                 TextBox23.Text = ""
             End If
-            '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-            If pivotName <> "" Then
+           
+            ' '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+            ' الحصول على الاسم الكامل للمحور من TextBox14
+            Dim pivotFullName2 As String = TextBox14.Text.Trim()
+
+            If pivotFullName2 <> "" Then
                 Try
-                    ' استعلام SQL لجلب عدد السجلات الخاصة بالمحور المطلوب مع شرط أن البطاقة محدثة فقط
-                    Dim query As String = "SELECT COUNT(*) FROM voter_fodalaa WHERE votercardstatus = @votercardstatus AND votercardstatus = 'غير محدثة'"
+                    ' استعلام SQL لحساب عدد الناخبين المرتبطين بالمحور بناءً على الاسم الكامل وحالة البطاقة "محدثة"
+                    Dim query As String = "SELECT COUNT(*) FROM voter_fodalaa vf " & _
+                                          "INNER JOIN AXIS_fodalaa af ON af.ID = vf.ID_AXIS_FAEDZAHRAA " & _
+                                          "WHERE (af.NAME + ' ' + af.FATHER + ' ' + af.GRANDFATHER + ' ' + af.great_father + ' ' + af.Title) = @FullName " & _
+                                          "AND vf.votercardstatus = 'غير محدثة'"
 
                     Dim cmd1 As New SqlCommand(query, sqlcon)
-                    cmd1.Parameters.AddWithValue("@votercardstatus", pivotName)
+                    cmd1.Parameters.AddWithValue("@FullName", pivotFullName2)
 
                     ' تنفيذ الاستعلام وجلب العدد
                     Dim count1 As Integer = Convert.ToInt32(cmd1.ExecuteScalar())
 
-                    ' تحديث TextBox25 بالعدد
+                    ' تحديث TextBox24 بالعدد
                     TextBox24.Text = count1.ToString()
                 Catch ex As Exception
                     MessageBox.Show("حدث خطأ أثناء البحث: " & ex.Message)
                 End Try
             Else
-                ' إذا كان TextBox14 فارغًا، يتم مسح العدد في TextBox25
+                ' إذا كان TextBox14 فارغًا، يتم مسح TextBox23
                 TextBox24.Text = ""
             End If
             ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -778,57 +790,7 @@ Public Class الفضلاء
 
     End Sub
 
-    '' '' دالة لاسترجاع معرف المحور بناءً على الاسم الرباعي واللقب
-    ' ''Public Function GetAxisIDByFullName(fullName As String) As Integer
-    ' ''    ' استعلام SQL لجلب معرف المحور باستخدام الاسم الرباعي واللقب
-    ' ''    Dim query As String = "SELECT ID FROM AXIS_FAEDZAHRAA WHERE (NAME + ' ' + FATHER + ' ' + GRANDFATHER + ' ' + great_father + ' ' + Title) = @FullName"
-    ' ''    Dim aID As Integer = -1 ' قيمة افتراضية تدل على أنه لم يتم العثور على المحور
-
-    ' ''    ' استخدام اتصال SQL لتنفيذ الاستعلام
-    ' ''    Using sqlcon As New SqlConnection("Server=DESKTOP-08SGMQ2\SQLEXPRESS;Database=white_hand;Integrated Security=True")
-    ' ''        Using cmd As New SqlCommand(query, sqlcon)
-    ' ''            ' إضافة معلمة الاسم الكامل للاستعلام
-    ' ''            cmd.Parameters.AddWithValue("@FullName", fullName)
-
-    ' ''            ' فتح الاتصال وتنفيذ الاستعلام
-    ' ''            sqlcon.Open()
-    ' ''            Dim result = cmd.ExecuteScalar()
-    ' ''            If result IsNot Nothing Then
-    ' ''                ' تحويل النتيجة إلى معرف المحور
-    ' ''                aID = Convert.ToInt32(result)
-    ' ''            End If
-    ' ''        End Using
-    ' ''    End Using
-
-    ' ''    ' إرجاع معرف المحور إذا تم العثور عليه، أو -1 إذا لم يتم العثور على المحور
-    ' ''    Return aID
-    ' ''End Function
-
-
-    ' '' '' دالة لاسترجاع بيانات الناخبين بناءً على معرف المحور
-    '' ''Public Function GetVotersByAxisID(aID As Integer) As DataTable
-    '' ''    ' استعلام SQL لجلب بيانات الناخبين بناءً على معرف المحور
-    '' ''    Dim query As String = "SELECT ID,voter_name,degree_kinship,voter_phone,voter_address,votercardnumber,votercardstatus,Filter_files,Nominate_observer,Nominate_mentor,Polling_center_number FROM voter_FAEDZAHRAA_1 WHERE ID = @ID"
-    '' ''    Dim dt As New DataTable()
-
-    '' ''    ' استخدام اتصال SQL لتنفيذ الاستعلام
-    '' ''    Using sqlcon As New SqlConnection("Server=DESKTOP-08SGMQ2\SQLEXPRESS;Database=white_hand;Integrated Security=True")
-    '' ''        Using cmd As New SqlCommand(query, sqlcon)
-    '' ''            ' إضافة معلمة معرف المحور للاستعلام
-    '' ''            cmd.Parameters.AddWithValue("@ID", aID)
-
-    '' ''            ' استخدام SqlDataAdapter لملء DataTable بالنتائج
-    '' ''            Using adapter As New SqlDataAdapter(cmd)
-    '' ''                adapter.Fill(dt)
-    '' ''            End Using
-    '' ''        End Using
-    '' ''    End Using
-
-    ' '' '' إرجاع DataTable الذي يحتوي على بيانات الناخبين
-    '' ''    Return dt
-    '' ''End Function
-
-
+   
     ' دالة لاسترجاع معرف المحور بناءً على الاسم الرباعي واللقب
     Public Function GetAxisIDByFullName(fullName As String) As Integer
         ' استعلام SQL لجلب معرف المحور باستخدام الاسم الرباعي واللقب
@@ -917,14 +879,17 @@ Public Class الفضلاء
                 cmd.Parameters.AddWithValue("@Title", TextBox5.Text)
                 cmd.Parameters.AddWithValue("@Gender", ComboBox2.Text)
                 cmd.Parameters.AddWithValue("@Socialname", If(String.IsNullOrWhiteSpace(TextBox6.Text), "لا يوجد", TextBox6.Text))
-                cmd.Parameters.AddWithValue("@birthDate", If(String.IsNullOrWhiteSpace(TextBox7.Text), "لا يوجد", TextBox7.Text))
+                'cmd.Parameters.AddWithValue("@birthDate", If(String.IsNullOrWhiteSpace(DateTimePicker1.Text), "لا يوجد", DateTimePicker1.Text))
+                cmd.Parameters.AddWithValue("@birthDate", If(String.IsNullOrWhiteSpace(DateTimePicker1.Text), "لا يوجد", DateTimePicker1.Value.ToString("yyyy-MM-dd")))
+
                 cmd.Parameters.AddWithValue("@familymembers", If(String.IsNullOrWhiteSpace(TextBox8.Text), "لا يوجد", TextBox8.Text))
                 cmd.Parameters.AddWithValue("@address", If(String.IsNullOrWhiteSpace(TextBox10.Text), "لا يوجد", TextBox10.Text))
                 cmd.Parameters.AddWithValue("@martialstatus", If(String.IsNullOrWhiteSpace(ComboBox4.Text), "لا يوجد", ComboBox4.Text))
                 cmd.Parameters.AddWithValue("@academicachievement", If(String.IsNullOrWhiteSpace(ComboBox6.Text), "لا يوجد", ComboBox6.Text))
                 cmd.Parameters.AddWithValue("@phone1", If(String.IsNullOrWhiteSpace(TextBox11.Text), "لا يوجد", TextBox11.Text))
                 cmd.Parameters.AddWithValue("@phone2", If(String.IsNullOrWhiteSpace(TextBox12.Text), "لا يوجد", TextBox12.Text))
-                cmd.Parameters.AddWithValue("@joiningdate", If(String.IsNullOrWhiteSpace(TextBox13.Text), "لا يوجد", TextBox13.Text))
+                cmd.Parameters.AddWithValue("@joiningdate", If(String.IsNullOrWhiteSpace(DateTimePicker2.Text), "لا يوجد", DateTimePicker2.Value.ToString("yyyy-MM-dd")))
+
                 cmd.Parameters.AddWithValue("@pointrefernce", If(String.IsNullOrWhiteSpace(TextBox16.Text), "لا يوجد", TextBox16.Text))
                 cmd.Parameters.AddWithValue("@Type", If(String.IsNullOrWhiteSpace(ComboBox1.Text), "لا يوجد", ComboBox1.Text))
                 cmd.Parameters.AddWithValue("@adjective", If(String.IsNullOrWhiteSpace(TextBox17.Text), "لا يوجد", TextBox17.Text))
@@ -992,7 +957,7 @@ Public Class الفضلاء
 
         If result = DialogResult.Yes Then
             ' فتح نافذة إدخال كلمة المرور
-            Dim passwordForm As New تأكيد_حذف_بيانات_فيض_الزهراء()
+            Dim passwordForm As New تأكيد_حذف_بيانات_الفضلاء()
             passwordForm.ShowDialog()
 
             ' إذا كانت كلمة المرور صحيحة، قم بتنفيذ الحذف
@@ -1067,6 +1032,8 @@ Public Class الفضلاء
             End If
             MessageBox.Show("حدث خطأ أثناء تحديث البيانات: " & ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+        LoadData() ' استدعاء الدالة لتحديث البيانات
+
     End Sub
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
@@ -1164,7 +1131,6 @@ Public Class الفضلاء
     End Sub
 
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
-
 
         ' ✅ التأكد أن الصورة ليست "لا يوجد" قبل الفتح
         If PictureBox7.Image IsNot Nothing AndAlso TextBox39.Text <> "لا يوجد" Then
@@ -1550,9 +1516,6 @@ Public Class الفضلاء
         تحديث_إحصائيات_الكلمات()
     End Sub
 
-    Private Sub TextBox25_TextChanged(sender As Object, e As EventArgs) Handles TextBox25.TextChanged
-
-    End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Me.Hide()
@@ -1560,6 +1523,81 @@ Public Class الفضلاء
     End Sub
 
    
+    Private Sub PictureBox12_Click(sender As Object, e As EventArgs) Handles PictureBox12.Click
+        LoadData() ' استدعاء الدالة لتحديث البيانات
+    End Sub
+    Private Sub TextBox11_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextBox11.KeyPress
+        ' السماح فقط بالأرقام وحذف أي إدخال غير رقمي
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+    Private Sub TextBox12_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextBox12.KeyPress
+        ' السماح فقط بالأرقام وحذف أي إدخال غير رقمي
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+    Private Sub TextBox69_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextBox69.KeyPress
+        ' السماح فقط بالأرقام وحذف أي إدخال غير رقمي
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+    Private Sub TextBox71_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextBox71.KeyPress
+        ' السماح فقط بالأرقام وحذف أي إدخال غير رقمي
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+    Private Sub TextBox74_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextBox74.KeyPress
+        ' السماح فقط بالأرقام وحذف أي إدخال غير رقمي
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+    Private Sub TextBox58_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextBox58.KeyPress
+        ' السماح فقط بالأرقام وحذف أي إدخال غير رقمي
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+    Private Sub TextBox62_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextBox62.KeyPress
+        ' السماح فقط بالأرقام وحذف أي إدخال غير رقمي
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+    Private Sub TextBox66_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextBox66.KeyPress
+        ' السماح فقط بالأرقام وحذف أي إدخال غير رقمي
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+    Private Sub TextBox26_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextBox26.KeyPress
+        ' السماح فقط بالأرقام وحذف أي إدخال غير رقمي
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+    Private Sub TextBox37_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextBox37.KeyPress
+        ' السماح فقط بالأرقام وحذف أي إدخال غير رقمي
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+    Private Sub TextBox41_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextBox41.KeyPress
+        ' السماح فقط بالأرقام وحذف أي إدخال غير رقمي
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+    Private Sub TextBox42_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextBox42.KeyPress
+        ' السماح فقط بالأرقام وحذف أي إدخال غير رقمي
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
 End Class
 
 

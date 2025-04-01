@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class واجهة_عرض_الصور
+Partial Class واجهة_عرض__صور_فيض_الزهراء
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.

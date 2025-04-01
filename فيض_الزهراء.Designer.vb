@@ -23,21 +23,23 @@ Partial Class فيض_الزهراء
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button9 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox68 = New System.Windows.Forms.TextBox()
         Me.Label85 = New System.Windows.Forms.Label()
         Me.ComboBox6 = New System.Windows.Forms.ComboBox()
         Me.TextBox16 = New System.Windows.Forms.TextBox()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -93,9 +95,22 @@ Partial Class فيض_الزهراء
         Me.TextBox36 = New System.Windows.Forms.TextBox()
         Me.Label47 = New System.Windows.Forms.Label()
         Me.Label46 = New System.Windows.Forms.Label()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Label66 = New System.Windows.Forms.Label()
+        Me.TextBox54 = New System.Windows.Forms.TextBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.TextBox19 = New System.Windows.Forms.TextBox()
         Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
@@ -112,8 +127,6 @@ Partial Class فيض_الزهراء
         Me.TextBox69 = New System.Windows.Forms.TextBox()
         Me.Label82 = New System.Windows.Forms.Label()
         Me.Label83 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.TextBox19 = New System.Windows.Forms.TextBox()
         Me.Label86 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -229,17 +242,15 @@ Partial Class فيض_الزهراء
         Me.TextBox45 = New System.Windows.Forms.TextBox()
         Me.Label58 = New System.Windows.Forms.Label()
         Me.Button7 = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel6.SuspendLayout()
@@ -249,6 +260,10 @@ Partial Class فيض_الزهراء
         Me.TabPage3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel11.SuspendLayout()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
         Me.Panel10.SuspendLayout()
@@ -273,15 +288,32 @@ Partial Class فيض_الزهراء
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 5000
+        '
+        'Button9
+        '
+        Me.Button9.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button9.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button9.Location = New System.Drawing.Point(1581, 345)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(211, 48)
+        Me.Button9.TabIndex = 581
+        Me.Button9.Text = "حذف"
+        Me.Button9.UseVisualStyleBackColor = False
+        '
         'Button6
         '
         Me.Button6.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button6.Font = New System.Drawing.Font("Times New Roman", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(1256, 398)
+        Me.Button6.Location = New System.Drawing.Point(1261, 399)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(530, 61)
-        Me.Button6.TabIndex = 552
+        Me.Button6.TabIndex = 580
         Me.Button6.Text = "تـــقـــــــــريــــــــــــــــــر"
         Me.Button6.UseVisualStyleBackColor = False
         '
@@ -300,14 +332,14 @@ Partial Class فيض_الزهراء
         Me.TabControl1.Controls.Add(Me.TabPage8)
         Me.TabControl1.Controls.Add(Me.TabPage9)
         Me.TabControl1.Font = New System.Drawing.Font("Times New Roman", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(1, 468)
+        Me.TabControl1.Location = New System.Drawing.Point(6, 469)
         Me.TabControl1.Multiline = True
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.TabControl1.RightToLeftLayout = True
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(1793, 694)
-        Me.TabControl1.TabIndex = 551
+        Me.TabControl1.TabIndex = 579
         '
         'TabPage1
         '
@@ -324,17 +356,17 @@ Partial Class فيض_الزهراء
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Panel6.Controls.Add(Me.DateTimePicker1)
+        Me.Panel6.Controls.Add(Me.DateTimePicker2)
         Me.Panel6.Controls.Add(Me.TextBox68)
         Me.Panel6.Controls.Add(Me.Label85)
         Me.Panel6.Controls.Add(Me.ComboBox6)
         Me.Panel6.Controls.Add(Me.TextBox16)
         Me.Panel6.Controls.Add(Me.TextBox10)
-        Me.Panel6.Controls.Add(Me.TextBox13)
         Me.Panel6.Controls.Add(Me.TextBox1)
         Me.Panel6.Controls.Add(Me.TextBox11)
         Me.Panel6.Controls.Add(Me.TextBox12)
         Me.Panel6.Controls.Add(Me.TextBox8)
-        Me.Panel6.Controls.Add(Me.TextBox7)
         Me.Panel6.Controls.Add(Me.TextBox6)
         Me.Panel6.Controls.Add(Me.TextBox5)
         Me.Panel6.Controls.Add(Me.TextBox4)
@@ -363,10 +395,27 @@ Partial Class فيض_الزهراء
         Me.Panel6.Size = New System.Drawing.Size(1734, 402)
         Me.Panel6.TabIndex = 0
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.CalendarFont = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Location = New System.Drawing.Point(917, 300)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 39)
+        Me.DateTimePicker1.TabIndex = 568
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.CalendarFont = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker2.Location = New System.Drawing.Point(77, 228)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(202, 39)
+        Me.DateTimePicker2.TabIndex = 569
+        '
         'TextBox68
         '
+        Me.TextBox68.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox68.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox68.ForeColor = System.Drawing.Color.DarkGray
+        Me.TextBox68.ForeColor = System.Drawing.Color.MediumBlue
         Me.TextBox68.Location = New System.Drawing.Point(1323, 97)
         Me.TextBox68.Name = "TextBox68"
         Me.TextBox68.Size = New System.Drawing.Size(202, 34)
@@ -392,7 +441,10 @@ Partial Class فيض_الزهراء
         '
         'ComboBox6
         '
+        Me.ComboBox6.BackColor = System.Drawing.Color.Gainsboro
+        Me.ComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox6.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox6.ForeColor = System.Drawing.Color.MediumBlue
         Me.ComboBox6.FormattingEnabled = True
         Me.ComboBox6.Items.AddRange(New Object() {"يقرأ و يكتب", "الابتدائي", "المتوسط ", "الثانوي /الاعدادي", "الدبلوم التقني او المهني", "البكالوريوس", "الماجستير ", " دكتوراء "})
         Me.ComboBox6.Location = New System.Drawing.Point(486, 304)
@@ -402,8 +454,9 @@ Partial Class فيض_الزهراء
         '
         'TextBox16
         '
+        Me.TextBox16.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox16.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox16.ForeColor = System.Drawing.Color.Black
+        Me.TextBox16.ForeColor = System.Drawing.Color.MediumBlue
         Me.TextBox16.Location = New System.Drawing.Point(77, 306)
         Me.TextBox16.Name = "TextBox16"
         Me.TextBox16.Size = New System.Drawing.Size(202, 34)
@@ -411,26 +464,19 @@ Partial Class فيض_الزهراء
         '
         'TextBox10
         '
+        Me.TextBox10.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox10.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox10.ForeColor = System.Drawing.Color.Black
+        Me.TextBox10.ForeColor = System.Drawing.Color.MediumBlue
         Me.TextBox10.Location = New System.Drawing.Point(486, 168)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(202, 34)
         Me.TextBox10.TabIndex = 576
         '
-        'TextBox13
-        '
-        Me.TextBox13.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox13.ForeColor = System.Drawing.Color.Black
-        Me.TextBox13.Location = New System.Drawing.Point(77, 233)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(202, 34)
-        Me.TextBox13.TabIndex = 574
-        '
         'TextBox1
         '
+        Me.TextBox1.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox1.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.Color.Black
+        Me.TextBox1.ForeColor = System.Drawing.Color.MediumBlue
         Me.TextBox1.Location = New System.Drawing.Point(1323, 149)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(202, 34)
@@ -438,8 +484,9 @@ Partial Class فيض_الزهراء
         '
         'TextBox11
         '
+        Me.TextBox11.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox11.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox11.ForeColor = System.Drawing.Color.Black
+        Me.TextBox11.ForeColor = System.Drawing.Color.MediumBlue
         Me.TextBox11.Location = New System.Drawing.Point(77, 99)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(202, 34)
@@ -447,8 +494,9 @@ Partial Class فيض_الزهراء
         '
         'TextBox12
         '
+        Me.TextBox12.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox12.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox12.ForeColor = System.Drawing.Color.Black
+        Me.TextBox12.ForeColor = System.Drawing.Color.MediumBlue
         Me.TextBox12.Location = New System.Drawing.Point(77, 163)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(202, 34)
@@ -456,26 +504,19 @@ Partial Class فيض_الزهراء
         '
         'TextBox8
         '
+        Me.TextBox8.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox8.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.ForeColor = System.Drawing.Color.Black
+        Me.TextBox8.ForeColor = System.Drawing.Color.MediumBlue
         Me.TextBox8.Location = New System.Drawing.Point(486, 99)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(202, 34)
         Me.TextBox8.TabIndex = 568
         '
-        'TextBox7
-        '
-        Me.TextBox7.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.ForeColor = System.Drawing.Color.Black
-        Me.TextBox7.Location = New System.Drawing.Point(917, 303)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(202, 34)
-        Me.TextBox7.TabIndex = 567
-        '
         'TextBox6
         '
+        Me.TextBox6.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox6.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.ForeColor = System.Drawing.Color.Black
+        Me.TextBox6.ForeColor = System.Drawing.Color.MediumBlue
         Me.TextBox6.Location = New System.Drawing.Point(917, 233)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(202, 34)
@@ -483,8 +524,9 @@ Partial Class فيض_الزهراء
         '
         'TextBox5
         '
+        Me.TextBox5.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox5.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.ForeColor = System.Drawing.Color.Black
+        Me.TextBox5.ForeColor = System.Drawing.Color.MediumBlue
         Me.TextBox5.Location = New System.Drawing.Point(917, 97)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(202, 34)
@@ -492,8 +534,9 @@ Partial Class فيض_الزهراء
         '
         'TextBox4
         '
+        Me.TextBox4.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox4.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.ForeColor = System.Drawing.Color.Black
+        Me.TextBox4.ForeColor = System.Drawing.Color.MediumBlue
         Me.TextBox4.Location = New System.Drawing.Point(1323, 306)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(202, 34)
@@ -501,8 +544,9 @@ Partial Class فيض_الزهراء
         '
         'TextBox3
         '
+        Me.TextBox3.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox3.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.ForeColor = System.Drawing.Color.Black
+        Me.TextBox3.ForeColor = System.Drawing.Color.MediumBlue
         Me.TextBox3.Location = New System.Drawing.Point(1323, 251)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(202, 34)
@@ -510,8 +554,9 @@ Partial Class فيض_الزهراء
         '
         'TextBox2
         '
+        Me.TextBox2.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox2.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.ForeColor = System.Drawing.Color.Black
+        Me.TextBox2.ForeColor = System.Drawing.Color.MediumBlue
         Me.TextBox2.Location = New System.Drawing.Point(1323, 203)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(202, 34)
@@ -519,7 +564,10 @@ Partial Class فيض_الزهراء
         '
         'ComboBox4
         '
+        Me.ComboBox4.BackColor = System.Drawing.Color.Gainsboro
+        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox4.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox4.ForeColor = System.Drawing.Color.MediumBlue
         Me.ComboBox4.FormattingEnabled = True
         Me.ComboBox4.Items.AddRange(New Object() {"اعزب", "متزوج"})
         Me.ComboBox4.Location = New System.Drawing.Point(486, 235)
@@ -529,7 +577,10 @@ Partial Class فيض_الزهراء
         '
         'ComboBox2
         '
+        Me.ComboBox2.BackColor = System.Drawing.Color.Gainsboro
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox2.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox2.ForeColor = System.Drawing.Color.MediumBlue
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"ذكر", "انثى"})
         Me.ComboBox2.Location = New System.Drawing.Point(917, 168)
@@ -835,8 +886,9 @@ Partial Class فيض_الزهراء
         '
         'ComboBox11
         '
+        Me.ComboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox11.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox11.ForeColor = System.Drawing.Color.Black
+        Me.ComboBox11.ForeColor = System.Drawing.Color.MediumBlue
         Me.ComboBox11.FormattingEnabled = True
         Me.ComboBox11.Location = New System.Drawing.Point(887, 215)
         Me.ComboBox11.Name = "ComboBox11"
@@ -845,8 +897,9 @@ Partial Class فيض_الزهراء
         '
         'ComboBox7
         '
+        Me.ComboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox7.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox7.ForeColor = System.Drawing.Color.Black
+        Me.ComboBox7.ForeColor = System.Drawing.Color.MediumBlue
         Me.ComboBox7.FormattingEnabled = True
         Me.ComboBox7.Items.AddRange(New Object() {"ملف الشباب ", "ملف الرياضة ", "الملف النسوي", "ملف العشائر", "الملف المهني", "ملف المراقبين", "ملف المرشدين "})
         Me.ComboBox7.Location = New System.Drawing.Point(887, 379)
@@ -859,7 +912,7 @@ Partial Class فيض_الزهراء
         Me.Label25.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label25.AutoSize = True
-        Me.Label25.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label25.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label25.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.Color.Black
@@ -887,7 +940,7 @@ Partial Class فيض_الزهراء
         Me.Label2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label2.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
@@ -945,8 +998,9 @@ Partial Class فيض_الزهراء
         '
         'TextBox20
         '
+        Me.TextBox20.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox20.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox20.ForeColor = System.Drawing.Color.Black
+        Me.TextBox20.ForeColor = System.Drawing.Color.MediumBlue
         Me.TextBox20.Location = New System.Drawing.Point(887, 331)
         Me.TextBox20.Name = "TextBox20"
         Me.TextBox20.Size = New System.Drawing.Size(255, 34)
@@ -954,8 +1008,9 @@ Partial Class فيض_الزهراء
         '
         'TextBox18
         '
+        Me.TextBox18.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox18.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox18.ForeColor = System.Drawing.Color.Black
+        Me.TextBox18.ForeColor = System.Drawing.Color.MediumBlue
         Me.TextBox18.Location = New System.Drawing.Point(40, 54)
         Me.TextBox18.Name = "TextBox18"
         Me.TextBox18.Size = New System.Drawing.Size(267, 34)
@@ -963,8 +1018,9 @@ Partial Class فيض_الزهراء
         '
         'TextBox17
         '
+        Me.TextBox17.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox17.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox17.ForeColor = System.Drawing.Color.Black
+        Me.TextBox17.ForeColor = System.Drawing.Color.MediumBlue
         Me.TextBox17.Location = New System.Drawing.Point(512, 54)
         Me.TextBox17.Name = "TextBox17"
         Me.TextBox17.Size = New System.Drawing.Size(267, 34)
@@ -972,8 +1028,9 @@ Partial Class فيض_الزهراء
         '
         'ComboBox3
         '
+        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox3.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox3.ForeColor = System.Drawing.Color.Black
+        Me.ComboBox3.ForeColor = System.Drawing.Color.MediumBlue
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Items.AddRange(New Object() {"محدثة", "غير محدثة"})
         Me.ComboBox3.Location = New System.Drawing.Point(889, 275)
@@ -986,7 +1043,7 @@ Partial Class فيض_الزهراء
         Me.Label27.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label27.AutoSize = True
-        Me.Label27.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label27.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label27.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.ForeColor = System.Drawing.Color.Black
@@ -1002,7 +1059,7 @@ Partial Class فيض_الزهراء
         Me.Label26.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label26.AutoSize = True
-        Me.Label26.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label26.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label26.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.Color.Black
@@ -1018,7 +1075,7 @@ Partial Class فيض_الزهراء
         Me.Label24.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label24.AutoSize = True
-        Me.Label24.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label24.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label24.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.Color.Black
@@ -1060,7 +1117,7 @@ Partial Class فيض_الزهراء
         Me.Label21.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label21.AutoSize = True
-        Me.Label21.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label21.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label21.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Black
@@ -1076,7 +1133,7 @@ Partial Class فيض_الزهراء
         Me.Label20.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label20.AutoSize = True
-        Me.Label20.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label20.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label20.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.Black
@@ -1092,7 +1149,7 @@ Partial Class فيض_الزهراء
         Me.Label19.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label19.AutoSize = True
-        Me.Label19.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label19.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label19.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.Black
@@ -1105,8 +1162,9 @@ Partial Class فيض_الزهراء
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.ForeColor = System.Drawing.Color.Black
+        Me.ComboBox1.ForeColor = System.Drawing.Color.MediumBlue
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"عقائدي", "خدمي"})
         Me.ComboBox1.Location = New System.Drawing.Point(975, 54)
@@ -1118,8 +1176,8 @@ Partial Class فيض_الزهراء
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 28.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label3.Location = New System.Drawing.Point(31, 112)
+        Me.Label3.ForeColor = System.Drawing.Color.MediumBlue
+        Me.Label3.Location = New System.Drawing.Point(7, 112)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(1704, 55)
         Me.Label3.TabIndex = 561
@@ -1146,10 +1204,10 @@ Partial Class فيض_الزهراء
         '
         'DataGridView1
         '
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.LightGray
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.GridColor = System.Drawing.Color.LightGray
-        Me.DataGridView1.Location = New System.Drawing.Point(680, 57)
+        Me.DataGridView1.Location = New System.Drawing.Point(1137, 57)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 26
         Me.DataGridView1.Size = New System.Drawing.Size(1107, 223)
@@ -1163,21 +1221,30 @@ Partial Class فيض_الزهراء
         Me.Panel11.Controls.Add(Me.TextBox36)
         Me.Panel11.Controls.Add(Me.Label47)
         Me.Panel11.Controls.Add(Me.Label46)
-        Me.Panel11.Controls.Add(Me.PictureBox4)
         Me.Panel11.Controls.Add(Me.TextBox9)
-        Me.Panel11.Location = New System.Drawing.Point(679, 6)
+        Me.Panel11.Controls.Add(Me.Button13)
+        Me.Panel11.Controls.Add(Me.Button12)
+        Me.Panel11.Controls.Add(Me.Button11)
+        Me.Panel11.Controls.Add(Me.Button10)
+        Me.Panel11.Controls.Add(Me.Button8)
+        Me.Panel11.Controls.Add(Me.PictureBox12)
+        Me.Panel11.Controls.Add(Me.PictureBox11)
+        Me.Panel11.Controls.Add(Me.PictureBox10)
+        Me.Panel11.Controls.Add(Me.PictureBox9)
+        Me.Panel11.Controls.Add(Me.PictureBox4)
+        Me.Panel11.Location = New System.Drawing.Point(469, 3)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(1108, 48)
+        Me.Panel11.Size = New System.Drawing.Size(1775, 48)
         Me.Panel11.TabIndex = 611
         '
         'TextBox35
         '
         Me.TextBox35.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox35.ForeColor = System.Drawing.Color.Black
-        Me.TextBox35.Location = New System.Drawing.Point(329, 7)
+        Me.TextBox35.ForeColor = System.Drawing.Color.Crimson
+        Me.TextBox35.Location = New System.Drawing.Point(274, 8)
         Me.TextBox35.Name = "TextBox35"
-        Me.TextBox35.Size = New System.Drawing.Size(201, 34)
-        Me.TextBox35.TabIndex = 606
+        Me.TextBox35.Size = New System.Drawing.Size(129, 34)
+        Me.TextBox35.TabIndex = 623
         '
         'Label45
         '
@@ -1187,22 +1254,22 @@ Partial Class فيض_الزهراء
         Me.Label45.BackColor = System.Drawing.Color.White
         Me.Label45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label45.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label45.ForeColor = System.Drawing.Color.Blue
+        Me.Label45.ForeColor = System.Drawing.Color.Crimson
         Me.Label45.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label45.Location = New System.Drawing.Point(885, 10)
+        Me.Label45.Location = New System.Drawing.Point(680, 11)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(142, 29)
-        Me.Label45.TabIndex = 605
+        Me.Label45.TabIndex = 622
         Me.Label45.Text = "اجمالي الاصوات"
         '
         'TextBox36
         '
         Me.TextBox36.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox36.ForeColor = System.Drawing.Color.Black
-        Me.TextBox36.Location = New System.Drawing.Point(12, 7)
+        Me.TextBox36.ForeColor = System.Drawing.Color.Crimson
+        Me.TextBox36.Location = New System.Drawing.Point(18, 8)
         Me.TextBox36.Name = "TextBox36"
-        Me.TextBox36.Size = New System.Drawing.Size(194, 34)
-        Me.TextBox36.TabIndex = 604
+        Me.TextBox36.Size = New System.Drawing.Size(129, 34)
+        Me.TextBox36.TabIndex = 621
         '
         'Label47
         '
@@ -1212,12 +1279,12 @@ Partial Class فيض_الزهراء
         Me.Label47.BackColor = System.Drawing.Color.White
         Me.Label47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label47.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label47.ForeColor = System.Drawing.Color.Blue
+        Me.Label47.ForeColor = System.Drawing.Color.Crimson
         Me.Label47.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label47.Location = New System.Drawing.Point(531, 10)
+        Me.Label47.Location = New System.Drawing.Point(409, 11)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(131, 29)
-        Me.Label47.TabIndex = 603
+        Me.Label47.TabIndex = 620
         Me.Label47.Text = "البطائق المحدثة"
         '
         'Label46
@@ -1228,36 +1295,140 @@ Partial Class فيض_الزهراء
         Me.Label46.BackColor = System.Drawing.Color.White
         Me.Label46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label46.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label46.ForeColor = System.Drawing.Color.Blue
+        Me.Label46.ForeColor = System.Drawing.Color.Crimson
         Me.Label46.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label46.Location = New System.Drawing.Point(208, 10)
+        Me.Label46.Location = New System.Drawing.Point(153, 11)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(115, 29)
-        Me.Label46.TabIndex = 601
+        Me.Label46.TabIndex = 619
         Me.Label46.Text = "تحتاج تحديث"
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox9.ForeColor = System.Drawing.Color.Crimson
+        Me.TextBox9.Location = New System.Drawing.Point(546, 8)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(129, 34)
+        Me.TextBox9.TabIndex = 618
+        '
+        'Button13
+        '
+        Me.Button13.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button13.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button13.Location = New System.Drawing.Point(852, 4)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(107, 40)
+        Me.Button13.TabIndex = 617
+        Me.Button13.Text = "تعديل"
+        Me.Button13.UseVisualStyleBackColor = False
+        '
+        'Button12
+        '
+        Me.Button12.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button12.Location = New System.Drawing.Point(1031, 3)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(107, 40)
+        Me.Button12.TabIndex = 616
+        Me.Button12.Text = "بحث"
+        Me.Button12.UseVisualStyleBackColor = False
+        '
+        'Button11
+        '
+        Me.Button11.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button11.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button11.Location = New System.Drawing.Point(1232, 4)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(107, 40)
+        Me.Button11.TabIndex = 615
+        Me.Button11.Text = "حذف"
+        Me.Button11.UseVisualStyleBackColor = False
+        '
+        'Button10
+        '
+        Me.Button10.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button10.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button10.Location = New System.Drawing.Point(1421, 4)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(107, 40)
+        Me.Button10.TabIndex = 614
+        Me.Button10.Text = "حفظ"
+        Me.Button10.UseVisualStyleBackColor = False
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.Location = New System.Drawing.Point(1610, 3)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(107, 40)
+        Me.Button8.TabIndex = 613
+        Me.Button8.Text = "اضافة"
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'PictureBox12
+        '
+        Me.PictureBox12.Image = Global.white_hand.My.Resources.Resources.تعديل
+        Me.PictureBox12.Location = New System.Drawing.Point(965, 5)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(44, 39)
+        Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox12.TabIndex = 610
+        Me.PictureBox12.TabStop = False
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.Image = Global.white_hand.My.Resources.Resources.البحث
+        Me.PictureBox11.Location = New System.Drawing.Point(1144, 5)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(45, 39)
+        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox11.TabIndex = 609
+        Me.PictureBox11.TabStop = False
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.Image = Global.white_hand.My.Resources.Resources.الحذف
+        Me.PictureBox10.Location = New System.Drawing.Point(1345, 4)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(45, 39)
+        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox10.TabIndex = 608
+        Me.PictureBox10.TabStop = False
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.Image = Global.white_hand.My.Resources.Resources.الحفظ1
+        Me.PictureBox9.Location = New System.Drawing.Point(1534, 5)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(45, 39)
+        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox9.TabIndex = 607
+        Me.PictureBox9.TabStop = False
         '
         'PictureBox4
         '
-        Me.PictureBox4.Image = Global.white_hand.My.Resources.Resources.السلة
-        Me.PictureBox4.Location = New System.Drawing.Point(1045, 6)
+        Me.PictureBox4.Image = Global.white_hand.My.Resources.Resources.اضافة
+        Me.PictureBox4.Location = New System.Drawing.Point(1723, 3)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(44, 39)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox4.TabIndex = 554
         Me.PictureBox4.TabStop = False
         '
-        'TextBox9
-        '
-        Me.TextBox9.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox9.ForeColor = System.Drawing.Color.Black
-        Me.TextBox9.Location = New System.Drawing.Point(678, 7)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(201, 34)
-        Me.TextBox9.TabIndex = 600
-        '
         'Panel9
         '
-        Me.Panel9.BackColor = System.Drawing.Color.LightGray
+        Me.Panel9.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel9.Controls.Add(Me.Label66)
+        Me.Panel9.Controls.Add(Me.TextBox54)
+        Me.Panel9.Controls.Add(Me.Label31)
+        Me.Panel9.Controls.Add(Me.TextBox19)
         Me.Panel9.Controls.Add(Me.ComboBox5)
         Me.Panel9.Controls.Add(Me.CheckBox5)
         Me.Panel9.Controls.Add(Me.CheckBox4)
@@ -1272,23 +1443,77 @@ Partial Class فيض_الزهراء
         Me.Panel9.Controls.Add(Me.TextBox69)
         Me.Panel9.Controls.Add(Me.Label82)
         Me.Panel9.Controls.Add(Me.Label83)
-        Me.Panel9.Controls.Add(Me.Label31)
-        Me.Panel9.Controls.Add(Me.TextBox19)
         Me.Panel9.Controls.Add(Me.Label86)
-        Me.Panel9.Location = New System.Drawing.Point(679, 286)
+        Me.Panel9.ForeColor = System.Drawing.Color.MediumBlue
+        Me.Panel9.Location = New System.Drawing.Point(1136, 286)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(1108, 160)
         Me.Panel9.TabIndex = 603
         '
+        'Label66
+        '
+        Me.Label66.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label66.AutoSize = True
+        Me.Label66.BackColor = System.Drawing.Color.White
+        Me.Label66.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label66.Font = New System.Drawing.Font("Times New Roman", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label66.ForeColor = System.Drawing.Color.Black
+        Me.Label66.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label66.Location = New System.Drawing.Point(984, 19)
+        Me.Label66.Name = "Label66"
+        Me.Label66.Size = New System.Drawing.Size(118, 27)
+        Me.Label66.TabIndex = 624
+        Me.Label66.Text = "معرف المحور"
+        '
+        'TextBox54
+        '
+        Me.TextBox54.BackColor = System.Drawing.Color.Gainsboro
+        Me.TextBox54.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox54.ForeColor = System.Drawing.Color.MediumBlue
+        Me.TextBox54.Location = New System.Drawing.Point(811, 15)
+        Me.TextBox54.Name = "TextBox54"
+        Me.TextBox54.Size = New System.Drawing.Size(170, 34)
+        Me.TextBox54.TabIndex = 623
+        Me.TextBox54.Text = "استعراض فقط"
+        Me.TextBox54.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label31
+        '
+        Me.Label31.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label31.AutoSize = True
+        Me.Label31.BackColor = System.Drawing.Color.White
+        Me.Label31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label31.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.ForeColor = System.Drawing.Color.Black
+        Me.Label31.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label31.Location = New System.Drawing.Point(984, 61)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(118, 29)
+        Me.Label31.TabIndex = 622
+        Me.Label31.Text = "الاســـــــــــــم"
+        '
+        'TextBox19
+        '
+        Me.TextBox19.BackColor = System.Drawing.Color.Gainsboro
+        Me.TextBox19.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox19.ForeColor = System.Drawing.Color.MediumBlue
+        Me.TextBox19.Location = New System.Drawing.Point(811, 58)
+        Me.TextBox19.Name = "TextBox19"
+        Me.TextBox19.Size = New System.Drawing.Size(170, 34)
+        Me.TextBox19.TabIndex = 621
+        '
         'ComboBox5
         '
+        Me.ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox5.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox5.ForeColor = System.Drawing.Color.Black
+        Me.ComboBox5.ForeColor = System.Drawing.Color.MediumBlue
         Me.ComboBox5.FormattingEnabled = True
         Me.ComboBox5.Items.AddRange(New Object() {"ملف الشباب ", "ملف الرياضة ", "الملف النسوي", "ملف العشائر", "الملف المهني", "ملف المراقبين", "ملف المرشدين "})
-        Me.ComboBox5.Location = New System.Drawing.Point(212, 12)
+        Me.ComboBox5.Location = New System.Drawing.Point(8, 17)
         Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(155, 34)
+        Me.ComboBox5.Size = New System.Drawing.Size(129, 34)
         Me.ComboBox5.TabIndex = 620
         '
         'CheckBox5
@@ -1298,12 +1523,13 @@ Partial Class فيض_الزهراء
         Me.CheckBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.CheckBox5.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.CheckBox5.Font = New System.Drawing.Font("Times New Roman", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox5.Location = New System.Drawing.Point(212, 97)
+        Me.CheckBox5.ForeColor = System.Drawing.Color.Black
+        Me.CheckBox5.Location = New System.Drawing.Point(277, 96)
         Me.CheckBox5.Name = "CheckBox5"
         Me.CheckBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.CheckBox5.Size = New System.Drawing.Size(288, 37)
+        Me.CheckBox5.Size = New System.Drawing.Size(228, 37)
         Me.CheckBox5.TabIndex = 619
-        Me.CheckBox5.Text = "تـرشـيــــح كـمـرشـــــــــــــد"
+        Me.CheckBox5.Text = "تـرشـيــح كمـرشــــــد"
         Me.CheckBox5.UseVisualStyleBackColor = False
         '
         'CheckBox4
@@ -1313,12 +1539,13 @@ Partial Class فيض_الزهراء
         Me.CheckBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.CheckBox4.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.CheckBox4.Font = New System.Drawing.Font("Times New Roman", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox4.Location = New System.Drawing.Point(213, 54)
+        Me.CheckBox4.ForeColor = System.Drawing.Color.Black
+        Me.CheckBox4.Location = New System.Drawing.Point(277, 53)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.CheckBox4.Size = New System.Drawing.Size(286, 37)
+        Me.CheckBox4.Size = New System.Drawing.Size(226, 37)
         Me.CheckBox4.TabIndex = 618
-        Me.CheckBox4.Text = "تـرشـيــــح كـمـراقـــــــــــب"
+        Me.CheckBox4.Text = "تـرشـيـح كمـراقـــــب"
         Me.CheckBox4.UseVisualStyleBackColor = False
         '
         'Panel10
@@ -1326,19 +1553,20 @@ Partial Class فيض_الزهراء
         Me.Panel10.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel10.Controls.Add(Me.TextBox74)
         Me.Panel10.Controls.Add(Me.Label88)
-        Me.Panel10.Location = New System.Drawing.Point(8, 14)
+        Me.Panel10.Location = New System.Drawing.Point(8, 54)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(198, 118)
+        Me.Panel10.Size = New System.Drawing.Size(263, 82)
         Me.Panel10.TabIndex = 617
         '
         'TextBox74
         '
+        Me.TextBox74.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox74.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox74.ForeColor = System.Drawing.Color.Black
-        Me.TextBox74.Location = New System.Drawing.Point(18, 57)
+        Me.TextBox74.ForeColor = System.Drawing.Color.MediumBlue
+        Me.TextBox74.Location = New System.Drawing.Point(9, 40)
         Me.TextBox74.Name = "TextBox74"
-        Me.TextBox74.Size = New System.Drawing.Size(165, 34)
-        Me.TextBox74.TabIndex = 610
+        Me.TextBox74.Size = New System.Drawing.Size(236, 34)
+        Me.TextBox74.TabIndex = 612
         '
         'Label88
         '
@@ -1348,18 +1576,19 @@ Partial Class فيض_الزهراء
         Me.Label88.BackColor = System.Drawing.Color.White
         Me.Label88.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label88.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label88.ForeColor = System.Drawing.Color.Blue
+        Me.Label88.ForeColor = System.Drawing.Color.Black
         Me.Label88.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label88.Location = New System.Drawing.Point(18, 20)
+        Me.Label88.Location = New System.Drawing.Point(9, 6)
         Me.Label88.Name = "Label88"
-        Me.Label88.Size = New System.Drawing.Size(170, 29)
-        Me.Label88.TabIndex = 609
-        Me.Label88.Text = "رقـم مركـز الانتخاب"
+        Me.Label88.Size = New System.Drawing.Size(250, 29)
+        Me.Label88.TabIndex = 611
+        Me.Label88.Text = "رقـــــم مـركـــز الانـتـخـــــــاب"
         '
         'ComboBox10
         '
+        Me.ComboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox10.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox10.ForeColor = System.Drawing.Color.Black
+        Me.ComboBox10.ForeColor = System.Drawing.Color.MediumBlue
         Me.ComboBox10.FormattingEnabled = True
         Me.ComboBox10.Items.AddRange(New Object() {"محدثة", "غير محدثة"})
         Me.ComboBox10.Location = New System.Drawing.Point(505, 100)
@@ -1369,30 +1598,34 @@ Partial Class فيض_الزهراء
         '
         'ComboBox9
         '
+        Me.ComboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox9.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox9.ForeColor = System.Drawing.Color.Black
+        Me.ComboBox9.ForeColor = System.Drawing.Color.MediumBlue
         Me.ComboBox9.FormattingEnabled = True
         Me.ComboBox9.Items.AddRange(New Object() {"بغداد"})
-        Me.ComboBox9.Location = New System.Drawing.Point(505, 18)
+        Me.ComboBox9.Location = New System.Drawing.Point(277, 15)
         Me.ComboBox9.Name = "ComboBox9"
         Me.ComboBox9.Size = New System.Drawing.Size(139, 34)
         Me.ComboBox9.TabIndex = 615
         '
         'ComboBox8
         '
+        Me.ComboBox8.BackColor = System.Drawing.Color.Gainsboro
+        Me.ComboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox8.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox8.ForeColor = System.Drawing.Color.Black
+        Me.ComboBox8.ForeColor = System.Drawing.Color.MediumBlue
         Me.ComboBox8.FormattingEnabled = True
-        Me.ComboBox8.Items.AddRange(New Object() {"الام ", "الاب ", "الاخ ", "الاخت ", "العم ", "ابن العم", "العمة", "ابن العمة", "الخال ", "ابن الخال", "الخالة ", "ابن الخالة", "صديق", "صديقة", "معارف"})
-        Me.ComboBox8.Location = New System.Drawing.Point(808, 62)
+        Me.ComboBox8.Items.AddRange(New Object() {"الام ", "الاب ", "الاخ ", "الاخت ", "العم ", "ابن العم", "العمة", "ابن العمة", "الخال ", "ابن الخال", "الخالة ", "ابن الخالة", "صديق", "صديقة", "زوجة", "زوج", "معارف"})
+        Me.ComboBox8.Location = New System.Drawing.Point(808, 100)
         Me.ComboBox8.Name = "ComboBox8"
         Me.ComboBox8.Size = New System.Drawing.Size(173, 34)
         Me.ComboBox8.TabIndex = 614
         '
         'TextBox71
         '
+        Me.TextBox71.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox71.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox71.ForeColor = System.Drawing.Color.Black
+        Me.TextBox71.ForeColor = System.Drawing.Color.MediumBlue
         Me.TextBox71.Location = New System.Drawing.Point(505, 58)
         Me.TextBox71.Name = "TextBox71"
         Me.TextBox71.Size = New System.Drawing.Size(139, 34)
@@ -1406,9 +1639,9 @@ Partial Class فيض_الزهراء
         Me.Label87.BackColor = System.Drawing.Color.White
         Me.Label87.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label87.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label87.ForeColor = System.Drawing.Color.Blue
+        Me.Label87.ForeColor = System.Drawing.Color.Black
         Me.Label87.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label87.Location = New System.Drawing.Point(371, 16)
+        Me.Label87.Location = New System.Drawing.Point(143, 20)
         Me.Label87.Name = "Label87"
         Me.Label87.Size = New System.Drawing.Size(128, 29)
         Me.Label87.TabIndex = 611
@@ -1422,13 +1655,13 @@ Partial Class فيض_الزهراء
         Me.Label84.BackColor = System.Drawing.Color.White
         Me.Label84.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label84.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label84.ForeColor = System.Drawing.Color.Blue
+        Me.Label84.ForeColor = System.Drawing.Color.Black
         Me.Label84.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label84.Location = New System.Drawing.Point(990, 63)
+        Me.Label84.Location = New System.Drawing.Point(984, 105)
         Me.Label84.Name = "Label84"
-        Me.Label84.Size = New System.Drawing.Size(110, 29)
+        Me.Label84.Size = New System.Drawing.Size(115, 29)
         Me.Label84.TabIndex = 606
-        Me.Label84.Text = "درجة القرابة"
+        Me.Label84.Text = "درجة القرابـة"
         '
         'Label56
         '
@@ -1438,21 +1671,22 @@ Partial Class فيض_الزهراء
         Me.Label56.BackColor = System.Drawing.Color.White
         Me.Label56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label56.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label56.ForeColor = System.Drawing.Color.Blue
+        Me.Label56.ForeColor = System.Drawing.Color.Black
         Me.Label56.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label56.Location = New System.Drawing.Point(650, 21)
+        Me.Label56.Location = New System.Drawing.Point(422, 18)
         Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(152, 29)
+        Me.Label56.Size = New System.Drawing.Size(77, 29)
         Me.Label56.TabIndex = 607
-        Me.Label56.Text = "العنـــــــــــــــــوان"
+        Me.Label56.Text = "العنــوان"
         '
         'TextBox69
         '
+        Me.TextBox69.BackColor = System.Drawing.Color.Gainsboro
         Me.TextBox69.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox69.ForeColor = System.Drawing.Color.Black
-        Me.TextBox69.Location = New System.Drawing.Point(808, 102)
+        Me.TextBox69.ForeColor = System.Drawing.Color.MediumBlue
+        Me.TextBox69.Location = New System.Drawing.Point(505, 15)
         Me.TextBox69.Name = "TextBox69"
-        Me.TextBox69.Size = New System.Drawing.Size(173, 34)
+        Me.TextBox69.Size = New System.Drawing.Size(139, 34)
         Me.TextBox69.TabIndex = 604
         '
         'Label82
@@ -1463,7 +1697,7 @@ Partial Class فيض_الزهراء
         Me.Label82.BackColor = System.Drawing.Color.White
         Me.Label82.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label82.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label82.ForeColor = System.Drawing.Color.Blue
+        Me.Label82.ForeColor = System.Drawing.Color.Black
         Me.Label82.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label82.Location = New System.Drawing.Point(650, 103)
         Me.Label82.Name = "Label82"
@@ -1479,38 +1713,13 @@ Partial Class فيض_الزهراء
         Me.Label83.BackColor = System.Drawing.Color.White
         Me.Label83.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label83.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label83.ForeColor = System.Drawing.Color.Blue
+        Me.Label83.ForeColor = System.Drawing.Color.Black
         Me.Label83.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label83.Location = New System.Drawing.Point(650, 60)
         Me.Label83.Name = "Label83"
         Me.Label83.Size = New System.Drawing.Size(150, 29)
         Me.Label83.TabIndex = 603
         Me.Label83.Text = "رقم بطاقة الناخـب"
-        '
-        'Label31
-        '
-        Me.Label31.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label31.AutoSize = True
-        Me.Label31.BackColor = System.Drawing.Color.White
-        Me.Label31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label31.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.ForeColor = System.Drawing.Color.Blue
-        Me.Label31.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label31.Location = New System.Drawing.Point(987, 23)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(113, 29)
-        Me.Label31.TabIndex = 601
-        Me.Label31.Text = "الاســــــــــــم"
-        '
-        'TextBox19
-        '
-        Me.TextBox19.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox19.ForeColor = System.Drawing.Color.Black
-        Me.TextBox19.Location = New System.Drawing.Point(808, 18)
-        Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.Size = New System.Drawing.Size(173, 34)
-        Me.TextBox19.TabIndex = 600
         '
         'Label86
         '
@@ -1520,21 +1729,21 @@ Partial Class فيض_الزهراء
         Me.Label86.BackColor = System.Drawing.Color.White
         Me.Label86.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label86.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label86.ForeColor = System.Drawing.Color.Blue
+        Me.Label86.ForeColor = System.Drawing.Color.Black
         Me.Label86.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label86.Location = New System.Drawing.Point(990, 107)
+        Me.Label86.Location = New System.Drawing.Point(650, 18)
         Me.Label86.Name = "Label86"
-        Me.Label86.Size = New System.Drawing.Size(111, 29)
+        Me.Label86.Size = New System.Drawing.Size(151, 29)
         Me.Label86.TabIndex = 602
-        Me.Label86.Text = "رقـم الهاتــف"
+        Me.Label86.Text = "رقــم الهاتـــــــــف"
         '
         'Button5
         '
-        Me.Button5.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button5.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.Black
-        Me.Button5.Location = New System.Drawing.Point(4, 6)
+        Me.Button5.Location = New System.Drawing.Point(463, 57)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(670, 48)
         Me.Button5.TabIndex = 591
@@ -1564,259 +1773,259 @@ Partial Class فيض_الزهراء
         Me.Panel2.Controls.Add(Me.Label69)
         Me.Panel2.Controls.Add(Me.TextBox55)
         Me.Panel2.Controls.Add(Me.Label68)
-        Me.Panel2.Location = New System.Drawing.Point(7, 60)
+        Me.Panel2.Location = New System.Drawing.Point(464, 111)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(667, 386)
+        Me.Panel2.Size = New System.Drawing.Size(667, 335)
         Me.Panel2.TabIndex = 589
         '
         'TextBox66
         '
         Me.TextBox66.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox66.ForeColor = System.Drawing.Color.Black
-        Me.TextBox66.Location = New System.Drawing.Point(17, 295)
+        Me.TextBox66.Location = New System.Drawing.Point(17, 272)
         Me.TextBox66.Name = "TextBox66"
         Me.TextBox66.Size = New System.Drawing.Size(129, 34)
-        Me.TextBox66.TabIndex = 590
+        Me.TextBox66.TabIndex = 610
         '
         'Label79
         '
         Me.Label79.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label79.AutoSize = True
-        Me.Label79.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label79.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label79.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label79.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label79.ForeColor = System.Drawing.Color.Black
         Me.Label79.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label79.Location = New System.Drawing.Point(152, 300)
+        Me.Label79.Location = New System.Drawing.Point(152, 277)
         Me.Label79.Name = "Label79"
         Me.Label79.Size = New System.Drawing.Size(178, 29)
-        Me.Label79.TabIndex = 589
+        Me.Label79.TabIndex = 609
         Me.Label79.Text = "عـــــدد المحطـــــــات"
         '
         'TextBox65
         '
         Me.TextBox65.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox65.ForeColor = System.Drawing.Color.Black
-        Me.TextBox65.Location = New System.Drawing.Point(16, 238)
+        Me.TextBox65.Location = New System.Drawing.Point(16, 215)
         Me.TextBox65.Name = "TextBox65"
         Me.TextBox65.Size = New System.Drawing.Size(130, 34)
-        Me.TextBox65.TabIndex = 588
+        Me.TextBox65.TabIndex = 608
         '
         'Label78
         '
         Me.Label78.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label78.AutoSize = True
-        Me.Label78.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label78.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label78.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label78.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label78.ForeColor = System.Drawing.Color.Black
         Me.Label78.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label78.Location = New System.Drawing.Point(152, 243)
+        Me.Label78.Location = New System.Drawing.Point(152, 220)
         Me.Label78.Name = "Label78"
         Me.Label78.Size = New System.Drawing.Size(175, 29)
-        Me.Label78.TabIndex = 587
+        Me.Label78.TabIndex = 607
         Me.Label78.Text = "عنوان مركز الاقتراع"
         '
         'TextBox64
         '
         Me.TextBox64.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox64.ForeColor = System.Drawing.Color.Black
-        Me.TextBox64.Location = New System.Drawing.Point(16, 176)
+        Me.TextBox64.Location = New System.Drawing.Point(16, 153)
         Me.TextBox64.Name = "TextBox64"
         Me.TextBox64.Size = New System.Drawing.Size(130, 34)
-        Me.TextBox64.TabIndex = 586
+        Me.TextBox64.TabIndex = 606
         '
         'Label77
         '
         Me.Label77.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label77.AutoSize = True
-        Me.Label77.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label77.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label77.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label77.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label77.ForeColor = System.Drawing.Color.Black
         Me.Label77.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label77.Location = New System.Drawing.Point(152, 176)
+        Me.Label77.Location = New System.Drawing.Point(152, 153)
         Me.Label77.Name = "Label77"
         Me.Label77.Size = New System.Drawing.Size(174, 29)
-        Me.Label77.TabIndex = 585
+        Me.Label77.TabIndex = 605
         Me.Label77.Text = "اسم مركــز الاقتــراع"
         '
         'TextBox63
         '
         Me.TextBox63.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox63.ForeColor = System.Drawing.Color.Black
-        Me.TextBox63.Location = New System.Drawing.Point(17, 113)
+        Me.TextBox63.Location = New System.Drawing.Point(17, 90)
         Me.TextBox63.Name = "TextBox63"
         Me.TextBox63.Size = New System.Drawing.Size(129, 34)
-        Me.TextBox63.TabIndex = 584
+        Me.TextBox63.TabIndex = 604
         '
         'Label76
         '
         Me.Label76.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label76.AutoSize = True
-        Me.Label76.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label76.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label76.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label76.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label76.ForeColor = System.Drawing.Color.Black
         Me.Label76.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label76.Location = New System.Drawing.Point(152, 116)
+        Me.Label76.Location = New System.Drawing.Point(152, 93)
         Me.Label76.Name = "Label76"
         Me.Label76.Size = New System.Drawing.Size(174, 29)
-        Me.Label76.TabIndex = 583
+        Me.Label76.TabIndex = 603
         Me.Label76.Text = "اسم مركــز التسجيــل"
         '
         'TextBox62
         '
         Me.TextBox62.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox62.ForeColor = System.Drawing.Color.Black
-        Me.TextBox62.Location = New System.Drawing.Point(17, 46)
+        Me.TextBox62.Location = New System.Drawing.Point(17, 23)
         Me.TextBox62.Name = "TextBox62"
         Me.TextBox62.Size = New System.Drawing.Size(129, 34)
-        Me.TextBox62.TabIndex = 582
+        Me.TextBox62.TabIndex = 602
         '
         'Label75
         '
         Me.Label75.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label75.AutoSize = True
-        Me.Label75.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label75.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label75.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label75.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label75.ForeColor = System.Drawing.Color.Black
         Me.Label75.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label75.Location = New System.Drawing.Point(152, 49)
+        Me.Label75.Location = New System.Drawing.Point(152, 26)
         Me.Label75.Name = "Label75"
         Me.Label75.Size = New System.Drawing.Size(171, 29)
-        Me.Label75.TabIndex = 581
+        Me.Label75.TabIndex = 601
         Me.Label75.Text = "رمز مركز التسجيــل"
         '
         'TextBox61
         '
         Me.TextBox61.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox61.ForeColor = System.Drawing.Color.Black
-        Me.TextBox61.Location = New System.Drawing.Point(352, 292)
+        Me.TextBox61.Location = New System.Drawing.Point(352, 269)
         Me.TextBox61.Name = "TextBox61"
         Me.TextBox61.Size = New System.Drawing.Size(143, 34)
-        Me.TextBox61.TabIndex = 580
+        Me.TextBox61.TabIndex = 600
         '
         'Label72
         '
         Me.Label72.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label72.AutoSize = True
-        Me.Label72.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label72.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label72.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label72.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label72.ForeColor = System.Drawing.Color.Black
         Me.Label72.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label72.Location = New System.Drawing.Point(501, 297)
+        Me.Label72.Location = New System.Drawing.Point(501, 274)
         Me.Label72.Name = "Label72"
         Me.Label72.Size = New System.Drawing.Size(148, 29)
-        Me.Label72.TabIndex = 579
+        Me.Label72.TabIndex = 599
         Me.Label72.Text = "اسم مركز التموين"
         '
         'TextBox58
         '
         Me.TextBox58.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox58.ForeColor = System.Drawing.Color.Black
-        Me.TextBox58.Location = New System.Drawing.Point(352, 233)
+        Me.TextBox58.Location = New System.Drawing.Point(352, 210)
         Me.TextBox58.Name = "TextBox58"
         Me.TextBox58.Size = New System.Drawing.Size(143, 34)
-        Me.TextBox58.TabIndex = 578
+        Me.TextBox58.TabIndex = 598
         '
         'Label71
         '
         Me.Label71.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label71.AutoSize = True
-        Me.Label71.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label71.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label71.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label71.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label71.ForeColor = System.Drawing.Color.Black
         Me.Label71.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label71.Location = New System.Drawing.Point(501, 233)
+        Me.Label71.Location = New System.Drawing.Point(501, 210)
         Me.Label71.Name = "Label71"
         Me.Label71.Size = New System.Drawing.Size(146, 29)
-        Me.Label71.TabIndex = 577
+        Me.Label71.TabIndex = 597
         Me.Label71.Text = "رقـــم التمـويــــن "
         '
         'TextBox57
         '
         Me.TextBox57.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox57.ForeColor = System.Drawing.Color.Black
-        Me.TextBox57.Location = New System.Drawing.Point(352, 172)
+        Me.TextBox57.Location = New System.Drawing.Point(352, 149)
         Me.TextBox57.Name = "TextBox57"
         Me.TextBox57.Size = New System.Drawing.Size(143, 34)
-        Me.TextBox57.TabIndex = 576
+        Me.TextBox57.TabIndex = 596
         '
         'Label70
         '
         Me.Label70.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label70.AutoSize = True
-        Me.Label70.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label70.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label70.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label70.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label70.ForeColor = System.Drawing.Color.Black
         Me.Label70.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label70.Location = New System.Drawing.Point(501, 172)
+        Me.Label70.Location = New System.Drawing.Point(501, 149)
         Me.Label70.Name = "Label70"
         Me.Label70.Size = New System.Drawing.Size(147, 29)
-        Me.Label70.TabIndex = 575
+        Me.Label70.TabIndex = 594
         Me.Label70.Text = "الناحيــة الجديـــدة"
         '
         'TextBox56
         '
         Me.TextBox56.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox56.ForeColor = System.Drawing.Color.Black
-        Me.TextBox56.Location = New System.Drawing.Point(352, 107)
+        Me.TextBox56.Location = New System.Drawing.Point(352, 84)
         Me.TextBox56.Name = "TextBox56"
         Me.TextBox56.Size = New System.Drawing.Size(143, 34)
-        Me.TextBox56.TabIndex = 576
+        Me.TextBox56.TabIndex = 595
         '
         'Label69
         '
         Me.Label69.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label69.AutoSize = True
-        Me.Label69.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label69.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label69.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label69.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label69.ForeColor = System.Drawing.Color.Black
         Me.Label69.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label69.Location = New System.Drawing.Point(501, 110)
+        Me.Label69.Location = New System.Drawing.Point(501, 87)
         Me.Label69.Name = "Label69"
         Me.Label69.Size = New System.Drawing.Size(147, 29)
-        Me.Label69.TabIndex = 575
+        Me.Label69.TabIndex = 593
         Me.Label69.Text = "القضـاء الجديـــــد"
         '
         'TextBox55
         '
         Me.TextBox55.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox55.ForeColor = System.Drawing.Color.Black
-        Me.TextBox55.Location = New System.Drawing.Point(352, 44)
+        Me.TextBox55.Location = New System.Drawing.Point(352, 21)
         Me.TextBox55.Name = "TextBox55"
         Me.TextBox55.Size = New System.Drawing.Size(143, 34)
-        Me.TextBox55.TabIndex = 574
+        Me.TextBox55.TabIndex = 592
         '
         'Label68
         '
         Me.Label68.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label68.AutoSize = True
-        Me.Label68.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label68.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label68.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label68.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label68.ForeColor = System.Drawing.Color.Black
         Me.Label68.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label68.Location = New System.Drawing.Point(501, 47)
+        Me.Label68.Location = New System.Drawing.Point(501, 24)
         Me.Label68.Name = "Label68"
         Me.Label68.Size = New System.Drawing.Size(149, 29)
-        Me.Label68.TabIndex = 573
+        Me.Label68.TabIndex = 591
         Me.Label68.Text = "اســم المـحـافـضـة"
         '
         'TabPage4
@@ -1855,22 +2064,22 @@ Partial Class فيض_الزهراء
         Me.TextBox67.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox67.Location = New System.Drawing.Point(6, 9)
         Me.TextBox67.Name = "TextBox67"
-        Me.TextBox67.Size = New System.Drawing.Size(195, 34)
+        Me.TextBox67.Size = New System.Drawing.Size(203, 34)
         Me.TextBox67.TabIndex = 570
         '
         'Label81
         '
         Me.Label81.AutoSize = True
-        Me.Label81.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Label81.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label81.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label81.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label81.ForeColor = System.Drawing.Color.Black
+        Me.Label81.ForeColor = System.Drawing.Color.Blue
         Me.Label81.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label81.Location = New System.Drawing.Point(207, 11)
+        Me.Label81.Location = New System.Drawing.Point(215, 11)
         Me.Label81.Name = "Label81"
-        Me.Label81.Size = New System.Drawing.Size(232, 29)
+        Me.Label81.Size = New System.Drawing.Size(224, 29)
         Me.Label81.TabIndex = 569
-        Me.Label81.Text = "اختيار صورة بطاقة التموينية"
+        Me.Label81.Text = "اضغط هنا لاختيار الصورة "
         Me.Label81.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'TextBox39
@@ -1878,22 +2087,22 @@ Partial Class فيض_الزهراء
         Me.TextBox39.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox39.Location = New System.Drawing.Point(445, 9)
         Me.TextBox39.Name = "TextBox39"
-        Me.TextBox39.Size = New System.Drawing.Size(220, 34)
+        Me.TextBox39.Size = New System.Drawing.Size(211, 34)
         Me.TextBox39.TabIndex = 568
         '
         'Label80
         '
         Me.Label80.AutoSize = True
-        Me.Label80.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Label80.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label80.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label80.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label80.ForeColor = System.Drawing.Color.Black
+        Me.Label80.ForeColor = System.Drawing.Color.Blue
         Me.Label80.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label80.Location = New System.Drawing.Point(671, 12)
+        Me.Label80.Location = New System.Drawing.Point(662, 14)
         Me.Label80.Name = "Label80"
-        Me.Label80.Size = New System.Drawing.Size(215, 29)
+        Me.Label80.Size = New System.Drawing.Size(224, 29)
         Me.Label80.TabIndex = 567
-        Me.Label80.Text = "اختيار صورة بطاقة السكن"
+        Me.Label80.Text = "اضغط هنا لاختيار الصورة "
         Me.Label80.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'TextBox21
@@ -1907,16 +2116,16 @@ Partial Class فيض_الزهراء
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Label29.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label29.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.ForeColor = System.Drawing.Color.Black
+        Me.Label29.ForeColor = System.Drawing.Color.Blue
         Me.Label29.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label29.Location = New System.Drawing.Point(1116, 12)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(222, 29)
+        Me.Label29.Size = New System.Drawing.Size(224, 29)
         Me.Label29.TabIndex = 565
-        Me.Label29.Text = "اختيار صورة بطاقة الناخب"
+        Me.Label29.Text = "اضغط هنا لاختيار الصورة "
         Me.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'TextBox43
@@ -1925,13 +2134,13 @@ Partial Class فيض_الزهراء
         Me.TextBox43.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox43.Location = New System.Drawing.Point(1344, 8)
         Me.TextBox43.Name = "TextBox43"
-        Me.TextBox43.Size = New System.Drawing.Size(193, 34)
+        Me.TextBox43.Size = New System.Drawing.Size(206, 34)
         Me.TextBox43.TabIndex = 564
         '
         'TextBox42
         '
         Me.TextBox42.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox42.Location = New System.Drawing.Point(6, 413)
+        Me.TextBox42.Location = New System.Drawing.Point(6, 411)
         Me.TextBox42.Name = "TextBox42"
         Me.TextBox42.Size = New System.Drawing.Size(262, 34)
         Me.TextBox42.TabIndex = 562
@@ -1939,7 +2148,7 @@ Partial Class فيض_الزهراء
         'TextBox41
         '
         Me.TextBox41.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox41.Location = New System.Drawing.Point(445, 413)
+        Me.TextBox41.Location = New System.Drawing.Point(445, 411)
         Me.TextBox41.Name = "TextBox41"
         Me.TextBox41.Size = New System.Drawing.Size(297, 34)
         Me.TextBox41.TabIndex = 560
@@ -1963,7 +2172,7 @@ Partial Class فيض_الزهراء
         'Label55
         '
         Me.Label55.AutoSize = True
-        Me.Label55.BackColor = System.Drawing.Color.White
+        Me.Label55.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label55.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label55.ForeColor = System.Drawing.Color.Black
@@ -1978,7 +2187,7 @@ Partial Class فيض_الزهراء
         'Label54
         '
         Me.Label54.AutoSize = True
-        Me.Label54.BackColor = System.Drawing.Color.White
+        Me.Label54.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label54.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label54.ForeColor = System.Drawing.Color.Black
@@ -1993,7 +2202,7 @@ Partial Class فيض_الزهراء
         'Label53
         '
         Me.Label53.AutoSize = True
-        Me.Label53.BackColor = System.Drawing.Color.White
+        Me.Label53.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label53.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label53.ForeColor = System.Drawing.Color.Black
@@ -2008,7 +2217,7 @@ Partial Class فيض_الزهراء
         'Label52
         '
         Me.Label52.AutoSize = True
-        Me.Label52.BackColor = System.Drawing.Color.White
+        Me.Label52.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label52.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label52.ForeColor = System.Drawing.Color.Black
@@ -2023,16 +2232,16 @@ Partial Class فيض_الزهراء
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Label28.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label28.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.ForeColor = System.Drawing.Color.Black
+        Me.Label28.ForeColor = System.Drawing.Color.Blue
         Me.Label28.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label28.Location = New System.Drawing.Point(1543, 13)
+        Me.Label28.Location = New System.Drawing.Point(1556, 11)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(237, 29)
+        Me.Label28.Size = New System.Drawing.Size(224, 29)
         Me.Label28.TabIndex = 541
-        Me.Label28.Text = "اختيار صورة البطاقة الموحدة"
+        Me.Label28.Text = "اضغط هنا لاختيار الصورة "
         Me.Label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'PictureBox8
@@ -2585,11 +2794,11 @@ Partial Class فيض_الزهراء
         Me.Label1.AutoSize = True
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(1259, 72)
+        Me.Label1.Location = New System.Drawing.Point(1312, 73)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(528, 39)
-        Me.Label1.TabIndex = 542
-        Me.Label1.Text = "معلومات ملف العقائدي/ ملف فيـــض الزهــــراء "
+        Me.Label1.Size = New System.Drawing.Size(479, 39)
+        Me.Label1.TabIndex = 570
+        Me.Label1.Text = "معـلومـات مـلـــف العقـائـــدي/فيض الزهراء"
         '
         'Panel1
         '
@@ -2600,10 +2809,10 @@ Partial Class فيض_الزهراء
         Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Controls.Add(Me.Button7)
-        Me.Panel1.Location = New System.Drawing.Point(6, 114)
+        Me.Panel1.Location = New System.Drawing.Point(4, 115)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1245, 345)
-        Me.Panel1.TabIndex = 550
+        Me.Panel1.TabIndex = 578
         '
         'GroupBox4
         '
@@ -2974,17 +3183,27 @@ Partial Class فيض_الزهراء
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(1212, 45)
         Me.Button7.TabIndex = 588
-        Me.Button7.Text = "واجهة مستخدم ملف العقائدي / فيض الزهراء"
+        Me.Button7.Text = "واجهـــة مستخـــدم ملــف العقائـــدي / فيـــض الزهراء"
         Me.Button7.UseVisualStyleBackColor = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.white_hand.My.Resources.Resources.مكبرة_البحث
+        Me.PictureBox2.Location = New System.Drawing.Point(1275, 126)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(44, 39)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 577
+        Me.PictureBox2.TabStop = False
         '
         'TextBox14
         '
         Me.TextBox14.Font = New System.Drawing.Font("Times New Roman", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox14.Location = New System.Drawing.Point(1256, 117)
+        Me.TextBox14.Location = New System.Drawing.Point(1261, 124)
         Me.TextBox14.Multiline = True
         Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(314, 52)
-        Me.TextBox14.TabIndex = 548
+        Me.TextBox14.Size = New System.Drawing.Size(314, 46)
+        Me.TextBox14.TabIndex = 576
         Me.TextBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'ListBox1
@@ -2992,21 +3211,21 @@ Partial Class فيض_الزهراء
         Me.ListBox1.Font = New System.Drawing.Font("Times New Roman", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 25
-        Me.ListBox1.Location = New System.Drawing.Point(1257, 170)
+        Me.ListBox1.Location = New System.Drawing.Point(1262, 171)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.ListBox1.Size = New System.Drawing.Size(313, 229)
-        Me.ListBox1.TabIndex = 547
+        Me.ListBox1.TabIndex = 575
         '
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(1576, 117)
+        Me.Button4.Location = New System.Drawing.Point(1581, 124)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(211, 52)
-        Me.Button4.TabIndex = 546
+        Me.Button4.TabIndex = 574
         Me.Button4.Text = "بحث"
         Me.Button4.UseVisualStyleBackColor = False
         '
@@ -3015,10 +3234,10 @@ Partial Class فيض_الزهراء
         Me.Button3.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(1575, 287)
+        Me.Button3.Location = New System.Drawing.Point(1580, 288)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(211, 48)
-        Me.Button3.TabIndex = 545
+        Me.Button3.TabIndex = 573
         Me.Button3.Text = "تعديل"
         Me.Button3.UseVisualStyleBackColor = False
         '
@@ -3027,10 +3246,10 @@ Partial Class فيض_الزهراء
         Me.Button2.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(1576, 232)
+        Me.Button2.Location = New System.Drawing.Point(1581, 233)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(211, 49)
-        Me.Button2.TabIndex = 544
+        Me.Button2.TabIndex = 572
         Me.Button2.Text = "حفظ"
         Me.Button2.UseVisualStyleBackColor = False
         '
@@ -3039,61 +3258,34 @@ Partial Class فيض_الزهراء
         Me.Button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(1576, 178)
+        Me.Button1.Location = New System.Drawing.Point(1581, 179)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(211, 48)
-        Me.Button1.TabIndex = 543
+        Me.Button1.TabIndex = 571
         Me.Button1.Text = "اضافة"
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Button9
-        '
-        Me.Button9.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(1576, 344)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(211, 48)
-        Me.Button9.TabIndex = 553
-        Me.Button9.Text = "حذف"
-        Me.Button9.UseVisualStyleBackColor = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.white_hand.My.Resources.Resources.مكبرة_البحث
-        Me.PictureBox2.Location = New System.Drawing.Point(1274, 123)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(44, 39)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 549
-        Me.PictureBox2.TabStop = False
         '
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.white_hand.My.Resources.Resources.سهم_الرجوع
-        Me.PictureBox3.Location = New System.Drawing.Point(-3, 0)
+        Me.PictureBox3.Location = New System.Drawing.Point(2, 1)
         Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(47, 50)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 541
+        Me.PictureBox3.TabIndex = 569
         Me.PictureBox3.TabStop = False
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.PictureBox1.Image = Global.white_hand.My.Resources.Resources.الخلفية_الثابتة
-        Me.PictureBox1.Location = New System.Drawing.Point(-3, 0)
+        Me.PictureBox1.Location = New System.Drawing.Point(2, 1)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(1813, 591)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 540
+        Me.PictureBox1.TabIndex = 568
         Me.PictureBox1.TabStop = False
-        '
-        'Timer1
-        '
-        Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 5000
         '
         'فيض_الزهراء
         '
@@ -3130,6 +3322,10 @@ Partial Class فيض_الزهراء
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel9.ResumeLayout(False)
         Me.Panel9.PerformLayout()
@@ -3167,11 +3363,111 @@ Partial Class فيض_الزهراء
         Me.PerformLayout()
 
     End Sub
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents Panel6 As System.Windows.Forms.Panel
+    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents TextBox68 As System.Windows.Forms.TextBox
+    Friend WithEvents Label85 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox6 As System.Windows.Forms.ComboBox
+    Friend WithEvents TextBox16 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label48 As System.Windows.Forms.Label
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Label40 As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents Panel7 As System.Windows.Forms.Panel
+    Friend WithEvents ComboBox11 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox7 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label25 As System.Windows.Forms.Label
+    Friend WithEvents Panel8 As System.Windows.Forms.Panel
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
+    Friend WithEvents TextBox20 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox18 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox17 As System.Windows.Forms.TextBox
+    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label27 As System.Windows.Forms.Label
+    Friend WithEvents Label26 As System.Windows.Forms.Label
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents Panel11 As System.Windows.Forms.Panel
+    Friend WithEvents TextBox35 As System.Windows.Forms.TextBox
+    Friend WithEvents Label45 As System.Windows.Forms.Label
+    Friend WithEvents TextBox36 As System.Windows.Forms.TextBox
+    Friend WithEvents Label47 As System.Windows.Forms.Label
+    Friend WithEvents Label46 As System.Windows.Forms.Label
+    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
+    Friend WithEvents Button13 As System.Windows.Forms.Button
+    Friend WithEvents Button12 As System.Windows.Forms.Button
+    Friend WithEvents Button11 As System.Windows.Forms.Button
+    Friend WithEvents Button10 As System.Windows.Forms.Button
+    Friend WithEvents Button8 As System.Windows.Forms.Button
+    Friend WithEvents PictureBox12 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox11 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox10 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
+    Friend WithEvents Panel9 As System.Windows.Forms.Panel
+    Friend WithEvents Label66 As System.Windows.Forms.Label
+    Friend WithEvents TextBox54 As System.Windows.Forms.TextBox
+    Friend WithEvents Label31 As System.Windows.Forms.Label
+    Friend WithEvents TextBox19 As System.Windows.Forms.TextBox
+    Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
+    Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox4 As System.Windows.Forms.CheckBox
+    Friend WithEvents Panel10 As System.Windows.Forms.Panel
+    Friend WithEvents TextBox74 As System.Windows.Forms.TextBox
+    Friend WithEvents Label88 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox10 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox9 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox8 As System.Windows.Forms.ComboBox
+    Friend WithEvents TextBox71 As System.Windows.Forms.TextBox
+    Friend WithEvents Label87 As System.Windows.Forms.Label
+    Friend WithEvents Label84 As System.Windows.Forms.Label
+    Friend WithEvents Label56 As System.Windows.Forms.Label
+    Friend WithEvents TextBox69 As System.Windows.Forms.TextBox
+    Friend WithEvents Label82 As System.Windows.Forms.Label
+    Friend WithEvents Label83 As System.Windows.Forms.Label
+    Friend WithEvents Label86 As System.Windows.Forms.Label
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents TextBox66 As System.Windows.Forms.TextBox
@@ -3195,6 +3491,12 @@ Partial Class فيض_الزهراء
     Friend WithEvents TextBox55 As System.Windows.Forms.TextBox
     Friend WithEvents Label68 As System.Windows.Forms.Label
     Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
+    Friend WithEvents TextBox67 As System.Windows.Forms.TextBox
+    Friend WithEvents Label81 As System.Windows.Forms.Label
+    Friend WithEvents TextBox39 As System.Windows.Forms.TextBox
+    Friend WithEvents Label80 As System.Windows.Forms.Label
+    Friend WithEvents TextBox21 As System.Windows.Forms.TextBox
+    Friend WithEvents Label29 As System.Windows.Forms.Label
     Friend WithEvents TextBox43 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox42 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox41 As System.Windows.Forms.TextBox
@@ -3210,6 +3512,22 @@ Partial Class فيض_الزهراء
     Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Friend WithEvents TabPage5 As System.Windows.Forms.TabPage
+    Friend WithEvents Panel5 As System.Windows.Forms.Panel
+    Friend WithEvents Label30 As System.Windows.Forms.Label
+    Friend WithEvents TextBox34 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox33 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox32 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox31 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox30 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox15 As System.Windows.Forms.TextBox
+    Friend WithEvents Label44 As System.Windows.Forms.Label
+    Friend WithEvents Label43 As System.Windows.Forms.Label
+    Friend WithEvents Label42 As System.Windows.Forms.Label
+    Friend WithEvents Label41 As System.Windows.Forms.Label
+    Friend WithEvents Label39 As System.Windows.Forms.Label
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents TabPage6 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage7 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage8 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage9 As System.Windows.Forms.TabPage
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
@@ -3235,100 +3553,8 @@ Partial Class فيض_الزهراء
     Friend WithEvents Label51 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents TextBox14 As System.Windows.Forms.TextBox
-    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents TextBox67 As System.Windows.Forms.TextBox
-    Friend WithEvents Label81 As System.Windows.Forms.Label
-    Friend WithEvents TextBox39 As System.Windows.Forms.TextBox
-    Friend WithEvents Label80 As System.Windows.Forms.Label
-    Friend WithEvents TextBox21 As System.Windows.Forms.TextBox
-    Friend WithEvents Label29 As System.Windows.Forms.Label
-    Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents Label30 As System.Windows.Forms.Label
-    Friend WithEvents TextBox34 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox33 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox32 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox31 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox30 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox15 As System.Windows.Forms.TextBox
-    Friend WithEvents Label44 As System.Windows.Forms.Label
-    Friend WithEvents Label43 As System.Windows.Forms.Label
-    Friend WithEvents Label42 As System.Windows.Forms.Label
-    Friend WithEvents Label41 As System.Windows.Forms.Label
-    Friend WithEvents Label39 As System.Windows.Forms.Label
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Panel6 As System.Windows.Forms.Panel
-    Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Panel7 As System.Windows.Forms.Panel
-    Friend WithEvents Panel8 As System.Windows.Forms.Panel
-    Friend WithEvents TextBox20 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox18 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox17 As System.Windows.Forms.TextBox
-    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
-    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label27 As System.Windows.Forms.Label
-    Friend WithEvents Label26 As System.Windows.Forms.Label
-    Friend WithEvents Label24 As System.Windows.Forms.Label
-    Friend WithEvents Label23 As System.Windows.Forms.Label
-    Friend WithEvents Label22 As System.Windows.Forms.Label
-    Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents Label20 As System.Windows.Forms.Label
-    Friend WithEvents Label19 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Button9 As System.Windows.Forms.Button
-    Friend WithEvents ComboBox7 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label25 As System.Windows.Forms.Label
-    Friend WithEvents Panel11 As System.Windows.Forms.Panel
-    Friend WithEvents Label45 As System.Windows.Forms.Label
-    Friend WithEvents TextBox36 As System.Windows.Forms.TextBox
-    Friend WithEvents Label47 As System.Windows.Forms.Label
-    Friend WithEvents Label46 As System.Windows.Forms.Label
-    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
-    Friend WithEvents Panel9 As System.Windows.Forms.Panel
-    Friend WithEvents Panel10 As System.Windows.Forms.Panel
-    Friend WithEvents TextBox74 As System.Windows.Forms.TextBox
-    Friend WithEvents Label88 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox10 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox9 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox8 As System.Windows.Forms.ComboBox
-    Friend WithEvents TextBox71 As System.Windows.Forms.TextBox
-    Friend WithEvents Label87 As System.Windows.Forms.Label
-    Friend WithEvents Label84 As System.Windows.Forms.Label
-    Friend WithEvents Label56 As System.Windows.Forms.Label
-    Friend WithEvents TextBox69 As System.Windows.Forms.TextBox
-    Friend WithEvents Label82 As System.Windows.Forms.Label
-    Friend WithEvents Label83 As System.Windows.Forms.Label
-    Friend WithEvents Label31 As System.Windows.Forms.Label
-    Friend WithEvents TextBox19 As System.Windows.Forms.TextBox
-    Friend WithEvents Label86 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox11 As System.Windows.Forms.ComboBox
-    Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox4 As System.Windows.Forms.CheckBox
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
-    Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
-    Friend WithEvents TabPage6 As System.Windows.Forms.TabPage
-    Friend WithEvents TabPage7 As System.Windows.Forms.TabPage
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label63 As System.Windows.Forms.Label
     Friend WithEvents TextBox53 As System.Windows.Forms.TextBox
     Friend WithEvents Label67 As System.Windows.Forms.Label
     Friend WithEvents Label64 As System.Windows.Forms.Label
@@ -3356,32 +3582,13 @@ Partial Class فيض_الزهراء
     Friend WithEvents TextBox45 As System.Windows.Forms.TextBox
     Friend WithEvents Label58 As System.Windows.Forms.Label
     Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents TextBox68 As System.Windows.Forms.TextBox
-    Friend WithEvents Label85 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox6 As System.Windows.Forms.ComboBox
-    Friend WithEvents TextBox16 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox13 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label48 As System.Windows.Forms.Label
-    Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents Label40 As System.Windows.Forms.Label
-    Friend WithEvents Label16 As System.Windows.Forms.Label
-    Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents Timer1 As System.Windows.Forms.Timer
-    Friend WithEvents TextBox35 As System.Windows.Forms.TextBox
-    Friend WithEvents Label63 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents TextBox14 As System.Windows.Forms.TextBox
+    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

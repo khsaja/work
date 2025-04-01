@@ -63,7 +63,8 @@ C:\Users\SK\documents\visual studio 2012\Projects\white_hand\white_hand\obj\Debu
 C:\Users\SK\documents\visual studio 2012\Projects\white_hand\white_hand\obj\Debug\white_hand.واجهة_عرض_طلبات_استرداد_كلمة_المرور.resources
 C:\Users\SK\documents\visual studio 2012\Projects\white_hand\white_hand\obj\Debug\white_hand.الدخول__بصفة_مسؤول.resources
 C:\Users\SK\documents\visual studio 2012\Projects\white_hand\white_hand\obj\Debug\white_hand.مسودة.resources
-C:\Users\SK\documents\visual studio 2012\Projects\white_hand\white_hand\obj\Debug\white_hand.واجهة_عرض_الصور.resources
 C:\Users\SK\documents\visual studio 2012\Projects\white_hand\white_hand\obj\Debug\white_hand.تأكيد_حذف_بيانات_فيض_الزهراء.resources
 C:\Users\SK\documents\visual studio 2012\Projects\white_hand\white_hand\obj\Debug\white_hand.تأكيد_حذف_بيانات_الفضلاء.resources
 C:\Users\SK\documents\visual studio 2012\Projects\white_hand\white_hand\obj\Debug\white_hand.عرض_صور_الفضلاء.resources
+C:\Users\SK\documents\visual studio 2012\Projects\white_hand\white_hand\obj\Debug\white_hand.vbproj.ResolveComReference.cache
+C:\Users\SK\documents\visual studio 2012\Projects\white_hand\white_hand\obj\Debug\white_hand.واجهة_عرض__صور_فيض_الزهراء.resources
